@@ -1,0 +1,58 @@
+---
+title: WEMA Servants
+desc: WEMA Servants: member registration, login, dashboard, Digital ID Card and volunteer activity logger.
+nav: servants
+---
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/leaders-group.jpg')"></div>
+  <div class="container rise">
+    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>WEMA Servants</span></div>
+    <h1>WEMA Servants</h1>
+    <p>Structure for volunteers and members.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <div class="rule rule--left"><i></i></div>
+      <h2>Member Login, Dashboard & Digital ID Card</h2>
+      <ul class="checks">
+        <li>Member registration with Stripe payment</li>
+        <li>Member login and dashboard</li>
+        <li>Digital ID Card download</li>
+        <li>Projects & Volunteer Activity Logger</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-purple" href="login.html">Login {{icon:arrow}}</a><a class="btn btn-outline-dark" href="#join">Member Registration</a></div>
+    </div>
+    <div class="id-card reveal reveal-d1" aria-label="Digital ID Card">
+        <div class="id-top"><img src="assets/logo.png" alt="" width="54" height="54"><div><b>WEMA Servants</b><small>Digital ID Card</small></div></div>
+        <div class="id-photo" aria-hidden="true">{{icon:users}}</div>
+        <div class="id-no">WEMA-SRV-[YEAR]-[SEQUENCE]</div>
+        <small class="id-foot">World Episcopal Missionary Alliance Inc.</small>
+      </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="grid g3">
+      <div class="card reveal"><div class="ico">{{icon:users}}</div><h3>Member Registration</h3><p>Join WEMA Servants and pay your membership securely.</p></div>
+      <div class="card reveal reveal-d1"><div class="ico">{{icon:dash}}</div><h3>Dashboard</h3><p>Profile, Digital ID download and volunteer hours.</p></div>
+      <div class="card reveal reveal-d2"><div class="ico">{{icon:doc}}</div><h3>Projects & Volunteer Activity Logger</h3><p>Record your volunteer hours on WEMA projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="join">
+  <div class="container--narrow">
+    <div class="sec-head center reveal"><div class="rule"><i></i></div><h2>Member Registration</h2></div>
+    <div class="form-card reveal">
+      <form class="form" data-checkout data-type="membership" novalidate>
+        <div class="row"><div class="field"><label for="sn">Full name</label><input class="input" id="sn" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="se">Email</label><input class="input" id="se" type="email" required autocomplete="email"><div class="error-msg">Required</div></div></div>
+        <div class="field"><label for="sc">Country</label><input class="input" id="sc" autocomplete="country-name"></div>
+        {{checkout}}
+      </form>
+    </div>
+  </div>
+</section>

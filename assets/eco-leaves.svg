@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d3a2a"/><stop offset=".55" stop-color="#2a1236"/><stop offset="1" stop-color="#3B0A45"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8932A"/><stop offset=".5" stop-color="#F2DC8C"/><stop offset="1" stop-color="#D4AF37"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".38" r=".5"><stop offset="0" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<rect width="800" height="1000" fill="url(#glow)"/>
+<g fill="none" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity=".95">
+<path d="M400 900 C400 760 400 640 400 470"/>
+<path d="M400 780 C330 740 280 700 250 640"/><path d="M400 720 C470 680 520 640 550 580"/>
+<path d="M400 640 C340 600 300 560 285 500"/><path d="M400 580 C460 545 495 505 510 450"/>
+<path d="M400 520 C370 480 355 440 358 395"/><path d="M400 500 C430 465 445 430 442 385"/>
+<path d="M400 470 C395 420 398 370 400 320"/>
+</g>
+<g fill="url(#gold)" opacity=".9">
+<path d="M250 640 C215 625 200 595 205 565 C238 575 256 605 250 640Z"/>
+<path d="M550 580 C585 565 600 535 595 505 C562 515 544 545 550 580Z"/>
+<path d="M285 500 C250 485 235 455 240 425 C273 435 291 465 285 500Z"/>
+<path d="M510 450 C545 435 560 405 555 375 C522 385 504 415 510 450Z"/>
+<path d="M358 395 C335 375 332 345 345 320 C368 338 372 368 358 395Z"/>
+<path d="M442 385 C465 365 468 335 455 310 C432 328 428 358 442 385Z"/>
+<path d="M400 320 C380 295 382 262 400 240 C418 262 420 295 400 320Z"/>
+</g>
+<g fill="none" stroke="#D4AF37" stroke-opacity=".28">
+<circle cx="400" cy="500" r="230"/><circle cx="400" cy="500" r="300"/><circle cx="400" cy="500" r="370"/>
+</g>
+<path d="M250 900 H550" stroke="url(#gold)" stroke-width="2.2"/>
+</svg>

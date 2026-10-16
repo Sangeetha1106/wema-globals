@@ -1,0 +1,51 @@
+---
+title: Conferences
+desc: WEMA Global International Conference, May 2027: delegate registration, speakers, schedule, QR check-in and certificates.
+nav: conferences
+---
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/arena-stage.jpg')"></div>
+  <div class="container rise">
+    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Conferences</span></div>
+    <h1>Global Leadership Conference</h1>
+    <p>May 2027 · WEMA Global International Conference</p>
+    <div class="countdown" style="margin-top:28px;animation:none;opacity:1" data-countdown="2027-05-15T09:00:00" role="timer" aria-label="Countdown">
+      <div class="cd" data-cd="d"><b>000</b><span>Days</span></div><div class="cd" data-cd="h"><b>00</b><span>Hours</span></div><div class="cd" data-cd="m"><b>00</b><span>Minutes</span></div><div class="cd" data-cd="s"><b>00</b><span>Seconds</span></div>
+    </div>
+    <div class="cta-row"><a class="btn btn-gold" href="#register">Register Now {{icon:arrow}}</a><a class="btn btn-outline" href="#sponsors">Sponsor</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid g3">
+      <div class="card reveal"><div class="ico">{{icon:ticket}}</div><h3>Delegate Registration</h3><p>Register and receive your confirmation.</p></div>
+      <div class="card reveal reveal-d1"><div class="ico">{{icon:mic}}</div><h3>Speakers & Schedule</h3><p>Speakers and the schedule will be announced here.</p></div>
+      <div class="card reveal reveal-d2"><div class="ico">{{icon:check}}</div><h3>QR Check-in & Certificates</h3><p>Receive a QR code for check-in and your certificate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="sponsors">
+  <div class="container">
+    <div class="sec-head center reveal"><h2>Sponsor, Exhibit & Virtual Participation</h2></div>
+    <div class="grid g2">
+      <div class="card reveal"><div class="ico">{{icon:star}}</div><h3>Sponsor</h3><a class="btn btn-gold btn-sm" href="contact.html?dept=Sponsorship">Sponsor Enquiry</a></div>
+      <div class="card reveal reveal-d1"><div class="ico">{{icon:building}}</div><h3>Exhibit</h3><a class="btn btn-gold btn-sm" href="contact.html?dept=Exhibition">Exhibitor Enquiry</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="register">
+  <div class="container--narrow">
+    <div class="sec-head center reveal"><div class="rule"><i></i></div><h2>Delegate Registration</h2></div>
+    <div class="form-card reveal">
+      <form class="form" data-checkout data-type="conference" novalidate>
+        <div class="field"><label for="cp">Conference Pass</label><select class="select" id="cp"><option>General</option><option>VIP</option><option>International</option><option>Virtual</option><option>Student / Academic</option><option>Ministry / Leadership</option><option>Sponsor</option><option>Exhibitor</option></select></div>
+        <div class="row"><div class="field"><label for="cn">Full name</label><input class="input" id="cn" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="ce">Email</label><input class="input" id="ce" type="email" required autocomplete="email"><div class="error-msg">Required</div></div></div>
+        <div class="row"><div class="field"><label for="cc">Country</label><input class="input" id="cc" autocomplete="country-name"></div><div class="field"><label for="co">Organization / church</label><input class="input" id="co"></div></div>
+        {{checkout}}
+      </form>
+    </div>
+  </div>
+</section>

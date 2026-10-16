@@ -1,0 +1,39 @@
+---
+title: Donate / Make a Payment
+desc: Donate or make a payment to WEMA Global with Stripe or PayPal in USD.
+nav: 
+---
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/leaders-group.jpg')"></div>
+  <div class="container rise">
+    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Donate</span></div>
+    <h1>Donate / Make a Payment</h1>
+    <p>WEMA Support Network</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container donate-layout">
+    <div class="form-card reveal">
+      <form id="donateForm" class="form" data-checkout data-amount data-type="donation" novalidate>
+        <div class="field"><label for="purpose">Payment for</label>
+          <select class="select" id="purpose"><option>Donation</option><option>Conference registration</option><option>WITS fee</option><option>WEMA Servants membership</option></select></div>
+        <div class="field"><label>Frequency</label><div class="freq"><label><input type="radio" name="freq" value="once" checked><span>One time</span></label><label><input type="radio" name="freq" value="monthly"><span>Monthly</span></label></div></div>
+        <div class="field" id="amountBox"><label for="amount">Amount (USD)</label>
+          <div class="amt-chips"><button type="button" class="amt-chip" data-v="25">$25</button><button type="button" class="amt-chip" data-v="50">$50</button><button type="button" class="amt-chip" data-v="100">$100</button><button type="button" class="amt-chip" data-v="250">$250</button></div>
+          <div class="amount-wrap"><span>$</span><input class="input" id="amount" type="number" min="1" step="1" inputmode="decimal"></div>
+          <div class="error-msg">Required</div></div>
+        <div class="row"><div class="field"><label for="dn">Full name</label><input class="input" id="dn" autocomplete="name"></div><div class="field"><label for="de">Email</label><input class="input" id="de" type="email" autocomplete="email"></div></div>
+        {{checkout}}
+      </form>
+    </div>
+    <aside class="reveal reveal-d1">
+      <div class="widget"><h3>After you pay</h3>
+        <ul class="auto-list"><li>Confirmation email</li><li>Payment receipt</li></ul>
+        <p class="hint">Sent automatically and instantly.</p></div>
+      <div class="widget" style="margin-top:22px"><h3>Our Missions & Impact</h3>
+        <p><a href="https://wemamissionaries.org" target="_blank" rel="noopener">wemamissionaries.org</a></p>
+        <p style="margin:0"><a href="https://alfaomegachildrenhome.org" target="_blank" rel="noopener">alfaomegachildrenhome.org</a></p></div>
+    </aside>
+  </div>
+</section>

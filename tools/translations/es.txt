@@ -1,0 +1,341 @@
+0|Saltar al contenido
+1|Organización registrada en EE. UU.
+2|Sheridan, Wyoming
+14|Iniciar sesión
+15|Registrarse
+17|Juntos marcamos la diferencia
+18|Inicio
+19|Acerca de WEMA
+21|Socios
+22|Proyectos
+24|Tienda
+25|Conferencias
+26|Medios
+27|Contacto
+28|Donar
+29|Donar / Hacer un pago
+30|Página no encontrada
+31|La página que busca no está disponible.
+32|WEMA Global en su teléfono
+33|Añada el sitio web a su pantalla de inicio y úselo como una aplicación.
+34|Añadir a la pantalla de inicio
+43|Explorar
+44|Más
+45|Correo electrónico: próximamente
+46|Teléfono: próximamente
+47|World Episcopal Missionary Alliance Inc. es una organización registrada en EE. UU. WEMA Global es una plataforma de facilitación y networking. No garantiza financiación, inversión, subvenciones, donaciones, contratos, alianzas ni ningún resultado financiero.
+48|Acreditación de WITS: En proceso (TRACS, ATS, ABHE). Todos los pagos y tarifas no son reembolsables en absoluto. Los pagos son procesados por Stripe y PayPal.
+49|Política de privacidad
+50|Condiciones de uso
+51|Política de reembolsos
+52|Preferencias de cookies
+53|iPhone / iPad (Safari): toque Compartir y luego Añadir a pantalla de inicio.
+54|Android (Chrome): abra el menú y luego Instalar aplicación.
+55|Ordenador (Chrome / Edge): haga clic en el icono de instalación de la barra de direcciones.
+56|Las cookies necesarias mantienen el sitio en funcionamiento. Las cookies opcionales permanecen desactivadas salvo que las permita.
+57|Necesarias
+58|Analítica
+59|Marketing
+60|De terceros
+61|Aceptar todas
+62|Solo las necesarias
+63|Personalizar
+64|Guardar preferencias
+65|Idioma
+67|Principal
+68|Menú
+69|Redes sociales
+75|Aviso legal
+76|Volver arriba
+77|Cerrar
+79|World Episcopal Missionary Alliance Inc. es una organización registrada en EE. UU. en Sheridan, Wyoming.
+80|Visión, misión y liderazgo
+81|Un ecosistema digital global que conecta personas, organizaciones, proyectos, conocimiento, iniciativas medioambientales, conferencias y desarrollo del liderazgo mediante una facilitación apoyada en la tecnología.
+82|Organización
+83|Estado
+84|Oficina
+85|Sheridan, Wyoming, EE. UU.
+86|Liderazgo
+87|Rev. Dr. Benjamin Franklin, Primado / Superintendente General
+88|Departamentos y misiones de WEMA
+89|Estructura para voluntarios y miembros.
+91|Red de organizaciones socias.
+93|Proyectos de educación, salud e infraestructura.
+95|Misiones misioneras y de plantación de iglesias.
+96|Instituto Teológico WEMA: educación y certificación.
+98|Productos vendidos para apoyar los proyectos de WEMA.
+99|Presencia global
+100|Países donde trabajamos: EE. UU., India, Europa, Canadá
+102|Canadá
+103|Europa
+104|India
+105|Aviso de registro en EE. UU.
+106|World Episcopal Missionary Alliance Inc. es una organización registrada en EE. UU.
+108|WEMA Global es una plataforma de facilitación y networking. No garantiza financiación, inversión, subvenciones, donaciones, contratos, alianzas, éxito empresarial ni ningún resultado financiero.
+109|Líderes en un círculo de diálogo
+110|Mapa mundial de puntos con las regiones de WEMA Global
+111|Regiones
+113|Conferencia Global de Liderazgo
+114|Mayo de 2027 · Conferencia Internacional de WEMA Global
+115|Días
+116|Horas
+117|Minutos
+118|Segundos
+119|Inscribirse ahora
+120|Patrocinar
+121|Inscripción de delegados
+122|Inscríbase y reciba su confirmación.
+123|Ponentes y programa
+124|Los ponentes y el programa se anunciarán aquí.
+125|Registro con QR y certificados
+126|Reciba un código QR para el registro de entrada y su certificado.
+127|Patrocinio, exposición y participación virtual
+128|Consulta de patrocinio
+129|Exponer
+130|Consulta de expositor
+131|Pase de conferencia
+132|General
+133|VIP
+134|Internacional
+135|Virtual
+136|Estudiante / Académico
+137|Ministerio / Liderazgo
+138|Expositor
+139|Nombre completo
+140|Obligatorio
+141|Correo electrónico
+142|País
+143|Organización / iglesia
+144|Método de pago
+145|Tarjeta
+148|Acepto que todos los pagos y tarifas no son reembolsables en absoluto y se consideran una donación final para las misiones y operaciones de WEMA Global.
+149|Si una traducción difiere, prevalece el texto en inglés.
+150|Pagar de forma segura
+151|Los pagos son procesados por Stripe y PayPal. WEMA Global no almacena los datos de la tarjeta.
+152|Cuenta atrás
+154|Consultas generales, de socios y de proyectos
+155|Departamento
+156|Seleccionar
+157|Socio
+158|Proyecto
+159|Conferencia
+160|Patrocinio
+161|Exposición
+162|Mensaje
+163|Acepto la Política de privacidad y las Condiciones de uso.
+164|Enviar mensaje
+165|Dirección
+166|Próximamente
+167|Teléfono
+168|Google Maps
+170|Pago de
+171|Donación
+172|Inscripción a la conferencia
+173|Cuota de WITS
+174|Membresía de WEMA Servants
+175|Frecuencia
+176|Una vez
+177|Mensual
+178|Importe (USD)
+179|Después de pagar
+180|Correo de confirmación
+181|Recibo de pago
+182|Se envía de forma automática e instantánea.
+183|Nuestras misiones e impacto
+187|Próximamente · Conferencia Internacional de WEMA Global
+188|Liderazgo Global
+189|Mayo de 2027
+190|Lugar por anunciar
+191|Obtener pase de conferencia
+192|Participación virtual
+193|Más información
+194|Compre por una causa
+195|Coco Peat, camisetas estampadas y prendas clericales, disponibles en Amazon y Shopify.
+196|Visitar WEMA Store
+198|Conozca los servicios y el impacto de nuestras misiones.
+199|Publicidad
+200|Patrocine y anúnciese con WEMA Global
+201|Llegue a una audiencia internacional de líderes, ministerios y socios.
+202|Apoye las misiones y operaciones de WEMA Global. Pagos seguros con Stripe o PayPal en USD.
+204|Un ecosistema digital global para la facilitación, el networking, las iniciativas medioambientales, las conferencias internacionales, el desarrollo del liderazgo cristiano, la educación teológica y la colaboración transfronteriza.
+205|El ecosistema WEMA
+207|Conferencias internacionales.
+209|Noticias y medios.
+210|Donde los colaboradores apoyan la labor de WEMA.
+211|De la conexión al impacto
+212|Conectar
+213|Personas, organizaciones y proyectos se encuentran.
+214|Revisar
+215|Nuestro equipo revisa cada solicitud.
+216|Facilitar
+217|Los proyectos aprobados se comparten.
+218|Colaborar
+219|Socios y proyectos trabajan juntos.
+220|Impacto
+221|El progreso se registra y se documenta.
+222|Coco Peat
+223|Próximamente en Amazon y Shopify
+224|Prendas de vestir
+225|Camisetas estampadas
+226|Prendas clericales
+228|Difundir el Evangelio, formar líderes espirituales y servir a las comunidades con compasión.
+230|Cuidado y educación para niños vulnerables en un entorno seguro.
+231|Misiones activas
+232|Sirviendo desde
+233|Países donde trabajamos
+234|Directorio global y mapa
+235|Conferencia Internacional de WEMA Global, mayo de 2027
+236|Inscripción de delegados, patrocinadores, expositores y participación virtual. Las fechas y el lugar se anunciarán.
+237|Leer más
+238|Acreditación de WITS: En proceso (TRACS, ATS, ABHE)
+239|El Instituto Teológico WEMA está avanzando en su proceso de acreditación.
+241|World Episcopal Missionary Alliance Inc. es una organización registrada en EE. UU.
+242|Registrada en Sheridan, Wyoming, EE. UU.
+243|Destacado
+247|Diapositiva anterior
+252|Diapositiva siguiente
+253|Pausar presentación
+254|Líderes de iglesias y ministerios
+256|Miembros, socios y estudiantes
+260|Contraseña
+262|Noticias, revista, galería de fotos y vídeos
+263|Noticias
+264|Revista
+265|Galería
+266|Mission Flame
+267|Nuestra revista se publicará aquí.
+268|Abrir imagen
+269|Auditorio
+270|Aula
+271|Líderes
+272|Sala de asambleas
+273|Red global
+274|Arena de la conferencia
+275|Imagen
+277|Sin conexión
+278|Sin conexión a internet
+279|Compruebe su conexión a internet e inténtelo de nuevo.
+281|Directorio global y mapa interactivo
+282|Perfil del socio
+283|Datos de la empresa y la organización
+284|Gestión de proyectos
+285|Los socios de recursos y colaboradores globales pueden explorar proyectos, expresar interés y solicitar presentaciones
+286|La información de contacto privada no se muestra automáticamente
+287|Hágase socio
+288|Nombre de la organización
+289|Nombre de contacto
+290|Socios dándose la mano
+292|Cómo trata WEMA Global su información personal.
+293|Información que recopilamos
+294|Cómo la usamos
+295|Pagos
+296|Compartir
+297|Seguridad
+298|Sus derechos
+299|Cookies
+300|Recopilamos la información que usted nos facilita al registrarse, enviar un proyecto, inscribirse en una conferencia, matricularse en un curso de WITS, contactarnos o realizar un pago. Incluye su nombre, correo electrónico, país, organización y estado del pago.
+301|Usamos su información para gestionar su cuenta, procesar inscripciones y pagos, enviar confirmaciones y recibos, revisar proyectos, hacer presentaciones y responder a sus mensajes.
+302|No vendemos su información. La compartimos solo con proveedores de pago y de servicios que nos ayudan a operar la plataforma, con las partes presentadas cuando usted lo acepta y cuando la ley lo exige.
+303|Usamos HTTPS, contraseñas cifradas y controles de acceso. Los documentos privados nunca son públicos.
+304|Puede solicitar en cualquier momento el acceso, la corrección o la eliminación de su información. Contáctenos con los datos de la página de Contacto.
+305|Las cookies necesarias mantienen el sitio en funcionamiento. Las cookies de analítica, marketing y de terceros solo se usan si usted las permite. Puede cambiar su elección en Preferencias de cookies.
+306|Contenido
+307|Todos los proyectos de impacto y misiones
+308|Aquí aparecerán los proyectos
+309|Los proyectos revisados se publican en esta página.
+310|Consulta sobre proyectos
+311|El Puente de Facilitación
+312|El motor central de networking y facilitación de WEMA Global.
+313|Vía A
+314|Sin ánimo de lucro, humanitario y comunitario
+315|ONG, iglesias y organizaciones misioneras
+316|Proyectos comunitarios y humanitarios
+317|Programas educativos y medioambientales
+318|Vía B
+319|Comercial y con ánimo de lucro
+320|Empresas, compañías y emprendedores
+321|Servicios profesionales e iniciativas tecnológicas
+322|Proyectos comerciales
+323|WEMA Global no garantiza financiación, inversión, subvenciones, donaciones, contratos, alianzas, éxito empresarial ni ningún resultado financiero.
+324|Detalles del proyecto y colaboración
+325|Cree un proyecto y guarde borradores
+326|Envíe una expresión de interés
+327|Solicite una presentación
+328|Red de apoyo
+329|Apoye las misiones y operaciones de WEMA Global.
+331|Todos los pagos y tarifas no son reembolsables en absoluto.
+332|Estrictamente no reembolsable
+333|Su acuerdo
+334|Recibos de pago
+335|Compras en la tienda
+336|Preguntas
+337|Todos los pagos y tarifas no son reembolsables en absoluto y se consideran una donación final para las misiones y operaciones de WEMA Global. Esto se aplica a la matrícula de WITS, las conferencias, la membresía y las donaciones.
+338|Antes de cada pago debe marcar una casilla para confirmarlo. No puede pagar sin hacerlo.
+339|Recibirá automáticamente un correo de confirmación y un recibo de pago después de cada pago. Un recibo es una confirmación de pago, no un documento fiscal.
+340|Los productos de WEMA Store se compran en Amazon o Shopify. Se aplican sus políticas de devolución.
+341|Si se le cobró por error, contáctenos a través de la página de Contacto con los datos de su recibo.
+342|Me uno como
+343|Particular
+344|Organización / ONG
+345|Iglesia / Ministerio
+346|Empresa
+347|Socio de recursos
+348|Delegado de conferencia
+349|Estudiante de WITS
+351|Acceso de miembros, panel y tarjeta de identificación digital
+352|Registro de miembros con pago mediante Stripe
+353|Acceso de miembros y panel
+354|Descarga de la tarjeta de identificación digital
+355|Proyectos y registro de actividad voluntaria
+356|Registro de miembros
+357|Tarjeta de identificación digital
+359|Únase a WEMA Servants y pague su membresía de forma segura.
+360|Panel
+361|Perfil, descarga de la identificación digital y horas de voluntariado.
+362|Registre sus horas de voluntariado en los proyectos de WEMA.
+364|Catálogo de productos
+365|Los productos vendidos aquí apoyan los proyectos de WEMA.
+366|Las compras se completan en Amazon o Shopify. WEMA Global no cobra pagos por los productos de la tienda en este sitio web.
+368|Las normas para usar WEMA Global.
+369|Aceptación
+370|Nuestro papel
+371|Cuentas
+372|Proyectos y contenido
+373|Ley aplicable
+374|Al usar este sitio web, usted acepta estas Condiciones de uso, la Política de privacidad y la Política de reembolsos.
+375|Facilite información veraz y mantenga segura su contraseña. Usted es responsable de la actividad de su cuenta.
+376|Usted confirma que lo que envía es exacto y que puede compartirlo. WEMA Global puede aprobar, rechazar, suspender o eliminar envíos. La revisión o publicación no es asesoramiento financiero, jurídico, de inversión ni contable.
+377|Todos los pagos y tarifas no son reembolsables en absoluto. Consulte la Política de reembolsos.
+378|Los productos de la tienda se venden en Amazon y Shopify. Esas plataformas gestionan su compra según sus propias condiciones.
+379|La acreditación de WITS está En proceso (TRACS, ATS, ABHE). WITS no afirma estar acreditado hasta que se conceda.
+380|Estas condiciones se rigen por las leyes del Estado de Wyoming, EE. UU.
+381|Gracias
+382|Bienvenido a WEMA Global
+383|Hemos recibido su mensaje
+384|Su pago ha sido recibido.
+385|Su cuenta ha sido creada.
+386|Hemos recibido su solicitud. Nuestro equipo le responderá.
+387|Código QR para el registro de entrada
+388|Respuesta automática
+389|Importe
+391|Enviado automáticamente
+393|Instituto Teológico WEMA
+394|Acreditación
+395|En proceso (TRACS, ATS, ABHE)
+397|En proceso
+400|Cursos
+401|Cursos, programa de estudios, acceso de estudiantes y pago de tarifas.
+402|Liderazgo cristiano
+403|Networking episcopal
+404|Relaciones apostólicas
+405|Networking ministerial
+406|Desarrollo del liderazgo
+407|Conexiones de iglesias globales
+408|Educación teológica
+409|Expedientes académicos y certificados
+410|Cursos y programa de estudios
+411|Certificados
+412|WITS distingue claramente entre certificados, diplomas, títulos académicos y reconocimientos honoríficos.
+413|Acceso de estudiantes
+414|Pago de tarifas
+415|Curso

@@ -1,0 +1,51 @@
+---
+title: Partners
+desc: WEMA Partners: global directory, interactive map of the countries where we work, partner profile and how to become a partner.
+nav: partners
+---
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/handshake-city.jpg')"></div>
+  <div class="container rise">
+    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Partners</span></div>
+    <h1>Partners</h1>
+    <p>Network of partner organizations.</p>
+  </div>
+</section>
+
+<section class="section section--dark" id="map">
+  <div class="container">
+    <div class="sec-head reveal"><h2>Global Directory & Interactive Map</h2><p class="lead">Countries where we work: USA, India, Europe, Canada</p></div>
+    {{map}}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="frame reveal"><div class="arch"><img src="assets/partnership-meeting.jpg" alt="Partners shaking hands" loading="lazy"></div></div>
+    <div class="reveal reveal-d1">
+      <div class="rule rule--left"><i></i></div>
+      <h2>Partner Profile</h2>
+      <ul class="checks">
+        <li>Company and organization details</li>
+        <li>Project management</li>
+        <li>Resource Partners and Global Collaborators can browse projects, express interest and request introductions</li>
+        <li>Private contact information is not shown automatically</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="become">
+  <div class="container--narrow">
+    <div class="sec-head center reveal"><div class="rule"><i></i></div><h2>Become a Partner</h2></div>
+    <div class="form-card reveal">
+      <form class="form" data-demo-submit data-redirect="thank-you.html?type=partner" novalidate>
+        <div class="row"><div class="field"><label for="pn">Organization name</label><input class="input" id="pn" required><div class="error-msg">Required</div></div><div class="field"><label for="pc">Country</label><input class="input" id="pc" autocomplete="country-name"></div></div>
+        <div class="row"><div class="field"><label for="pp">Contact name</label><input class="input" id="pp" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="pe">Email</label><input class="input" id="pe" type="email" required autocomplete="email"><div class="error-msg">Required</div></div></div>
+        <div class="field"><label for="pm">Message</label><textarea class="textarea" id="pm"></textarea></div>
+        <label class="consent"><input type="checkbox" required> <span>I agree to the Privacy Policy and Terms of Use.</span></label>
+        <button class="btn btn-gold" type="submit">Become a Partner</button>
+      </form>
+    </div>
+  </div>
+</section>

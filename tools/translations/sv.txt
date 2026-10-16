@@ -1,0 +1,341 @@
+0|Hoppa till innehåll
+1|Organisation registrerad i USA
+2|Sheridan, Wyoming
+14|Logga in
+15|Registrera
+17|Tillsammans gör vi skillnad
+18|Hem
+19|Om WEMA
+21|Partner
+22|Projekt
+24|Butik
+25|Konferenser
+26|Media
+27|Kontakt
+28|Ge en gåva
+29|Ge en gåva / Gör en betalning
+30|Sidan hittades inte
+31|Sidan du letar efter är inte tillgänglig.
+32|WEMA Global i din telefon
+33|Lägg till webbplatsen på hemskärmen och använd den som en app.
+34|Lägg till på hemskärmen
+43|Utforska
+44|Mer
+45|E-post: kommer snart
+46|Telefon: kommer snart
+47|World Episcopal Missionary Alliance Inc. är en organisation registrerad i USA. WEMA Global är en plattform för förmedling och nätverkande. Den garanterar inte finansiering, investeringar, bidrag, gåvor, avtal, partnerskap eller något ekonomiskt resultat.
+48|WITS-ackreditering: pågående (TRACS, ATS, ABHE). Alla betalningar och avgifter är strikt icke-återbetalningsbara. Betalningar hanteras av Stripe och PayPal.
+49|Integritetspolicy
+50|Användarvillkor
+51|Återbetalningspolicy
+52|Cookie-inställningar
+53|iPhone / iPad (Safari): tryck på Dela och sedan Lägg till på hemskärmen.
+54|Android (Chrome): öppna menyn och välj Installera app.
+55|Dator (Chrome / Edge): klicka på installationsikonen i adressfältet.
+56|Nödvändiga cookies håller webbplatsen igång. Valfria cookies förblir avstängda om du inte tillåter dem.
+57|Nödvändiga
+58|Analys
+59|Marknadsföring
+60|Tredje part
+61|Acceptera alla
+62|Endast nödvändiga
+63|Anpassa
+64|Spara inställningar
+65|Språk
+67|Huvudmeny
+68|Meny
+69|Sociala medier
+75|Juridik
+76|Till toppen
+77|Stäng
+79|World Episcopal Missionary Alliance Inc. är en organisation registrerad i USA i Sheridan, Wyoming.
+80|Vision, uppdrag och ledarskap
+81|Ett globalt digitalt ekosystem som förbinder människor, organisationer, projekt, kunskap, miljöinitiativ, konferenser och ledarutveckling genom teknikstödd förmedling.
+82|Organisation
+83|Status
+84|Kontor
+85|Sheridan, Wyoming, USA
+86|Ledarskap
+87|Pastor Dr. Benjamin Franklin, Primas / Generaltillsyningsman
+88|Avdelningar och WEMA-uppdrag
+89|Struktur för volontärer och medlemmar.
+91|Nätverk av partnerorganisationer.
+93|Projekt inom utbildning, hälsa och infrastruktur.
+95|Missionsuppdrag och kyrkogrundande.
+96|WEMA Institute of Theological Studies: utbildning och certifiering.
+98|Produkter som säljs för att stödja WEMA:s projekt.
+99|Global närvaro
+100|Länder där vi arbetar: USA, Indien, Europa, Kanada
+102|Kanada
+103|Europa
+104|Indien
+105|Meddelande om registrering i USA
+106|World Episcopal Missionary Alliance Inc. är en organisation registrerad i USA.
+108|WEMA Global är en plattform för förmedling och nätverkande. Den garanterar inte finansiering, investeringar, bidrag, gåvor, avtal, partnerskap, affärsframgång eller något ekonomiskt resultat.
+109|Ledare i en samtalscirkel
+110|Prickad världskarta med WEMA Globals regioner
+111|Regioner
+113|Global ledarskapskonferens
+114|Maj 2027 · WEMA Globals internationella konferens
+115|Dagar
+116|Timmar
+117|Minuter
+118|Sekunder
+119|Registrera dig nu
+120|Sponsra
+121|Delegatanmälan
+122|Anmäl dig och få din bekräftelse.
+123|Talare och program
+124|Talare och program tillkännages här.
+125|QR-incheckning och intyg
+126|Få en QR-kod för incheckning och ditt intyg.
+127|Sponsring, utställning och virtuellt deltagande
+128|Sponsringsförfrågan
+129|Ställ ut
+130|Utställarförfrågan
+131|Konferenspass
+132|Allmänt
+133|VIP
+134|Internationellt
+135|Virtuellt
+136|Student / Akademiker
+137|Tjänst / Ledarskap
+138|Utställare
+139|Fullständigt namn
+140|Obligatoriskt
+141|E-post
+142|Land
+143|Organisation / kyrka
+144|Betalningssätt
+145|Kort
+148|Jag godkänner att alla betalningar och avgifter är strikt icke-återbetalningsbara och betraktas som en slutgiltig gåva till WEMA Globals uppdrag och verksamhet.
+149|Om en översättning avviker gäller den engelska texten.
+150|Betala säkert
+151|Betalningar hanteras av Stripe och PayPal. WEMA Global lagrar inga kortuppgifter.
+152|Nedräkning
+154|Allmänna frågor samt frågor om partner och projekt
+155|Avdelning
+156|Välj
+157|Partner
+158|Projekt
+159|Konferens
+160|Sponsring
+161|Utställning
+162|Meddelande
+163|Jag godkänner Integritetspolicyn och Användarvillkoren.
+164|Skicka meddelande
+165|Adress
+166|Kommer snart
+167|Telefon
+168|Google Maps
+170|Betalning för
+171|Gåva
+172|Konferensanmälan
+173|WITS-avgift
+174|Medlemskap i WEMA Servants
+175|Frekvens
+176|Engångs
+177|Månadsvis
+178|Belopp (USD)
+179|Efter din betalning
+180|Bekräftelsemejl
+181|Betalningskvitto
+182|Skickas automatiskt och direkt.
+183|Våra uppdrag och vår påverkan
+187|Kommer snart · WEMA Globals internationella konferens
+188|Globalt ledarskap
+189|Maj 2027
+190|Plats meddelas senare
+191|Skaffa konferenspass
+192|Virtuellt deltagande
+193|Läs mer
+194|Handla för en sak
+195|Coco Peat, tryckta t-shirts och prästkläder, tillgängliga på Amazon och Shopify.
+196|Besök WEMA Store
+198|Se våra uppdrags tjänster och påverkan.
+199|Annons
+200|Sponsra och annonsera med WEMA Global
+201|Nå en internationell publik av ledare, tjänster och partner.
+202|Stöd WEMA Globals uppdrag och verksamhet. Säkra betalningar med Stripe eller PayPal i USD.
+204|Ett globalt digitalt ekosystem för förmedling, nätverkande, miljöinitiativ, internationella konferenser, kristen ledarutveckling, teologisk utbildning och gränsöverskridande samarbete.
+205|WEMA-ekosystemet
+207|Internationella konferenser.
+209|Nyheter och media.
+210|Här bidrar stödjare till WEMA:s arbete.
+211|Från kontakt till påverkan
+212|Förbinda
+213|Människor, organisationer och projekt möts.
+214|Granska
+215|Vårt team granskar varje inlämning.
+216|Förmedla
+217|Godkända projekt delas.
+218|Samarbeta
+219|Partner och projekt arbetar tillsammans.
+220|Påverkan
+221|Framsteg följs upp och dokumenteras.
+222|Coco Peat
+223|Kommer snart på Amazon och Shopify
+224|Plagg
+225|Tryckta t-shirts
+226|Prästkläder
+228|Sprida evangeliet, utbilda andliga ledare och tjäna samhällen med medkänsla.
+230|Omsorg och utbildning för utsatta barn i en trygg miljö.
+231|Aktiva uppdrag
+232|I tjänst sedan
+233|Länder där vi arbetar
+234|Global katalog och karta
+235|WEMA Globals internationella konferens, maj 2027
+236|Delegatanmälan, sponsorer, utställare och virtuellt deltagande. Datum och plats meddelas.
+237|Läs mer
+238|WITS-ackreditering: pågående (TRACS, ATS, ABHE)
+239|WEMA Institute of Theological Studies genomgår sin ackrediteringsprocess.
+241|World Episcopal Missionary Alliance Inc. är en organisation registrerad i USA
+242|Registrerad i Sheridan, Wyoming, USA.
+243|Utvalt
+247|Föregående bild
+252|Nästa bild
+253|Pausa bildspelet
+254|Kyrko- och tjänsteledare
+256|Medlemmar, partner och studenter
+260|Lösenord
+262|Nyheter, magasin, foto- och videogalleri
+263|Nyheter
+264|Magasin
+265|Galleri
+266|Mission Flame
+267|Vårt magasin publiceras här.
+268|Öppna bild
+269|Aula
+270|Klassrum
+271|Ledare
+272|Församlingssal
+273|Globalt nätverk
+274|Konferensarena
+275|Bild
+277|Offline
+278|Du är offline
+279|Kontrollera din internetanslutning och försök igen.
+281|Global katalog och interaktiv karta
+282|Partnerprofil
+283|Uppgifter om företag och organisation
+284|Projektledning
+285|Resurspartner och globala samarbetspartner kan bläddra bland projekt, visa intresse och begära presentationer
+286|Privata kontaktuppgifter visas inte automatiskt
+287|Bli partner
+288|Organisationens namn
+289|Kontaktperson
+290|Partner som skakar hand
+292|Hur WEMA Global hanterar dina personuppgifter.
+293|Uppgifter vi samlar in
+294|Hur vi använder dem
+295|Betalningar
+296|Delning
+297|Säkerhet
+298|Dina rättigheter
+299|Cookies
+300|Vi samlar in de uppgifter du ger oss när du registrerar dig, skickar in ett projekt, anmäler dig till en konferens, skriver in dig på en WITS-kurs, kontaktar oss eller gör en betalning. Det omfattar ditt namn, e-post, land, organisation och betalningsstatus.
+301|Vi använder dina uppgifter för att hantera ditt konto, behandla anmälningar och betalningar, skicka bekräftelser och kvitton, granska projekt, förmedla kontakter och besvara dina meddelanden.
+302|Vi säljer inte dina uppgifter. Vi delar dem bara med betalnings- och tjänsteleverantörer som hjälper oss driva plattformen, med presenterade parter när du samtycker och när lagen kräver det.
+303|Vi använder HTTPS, krypterade lösenord och åtkomstkontroller. Privata dokument är aldrig offentliga.
+304|Du kan när som helst begära åtkomst till, rättelse eller radering av dina uppgifter. Kontakta oss via uppgifterna på Kontaktsidan.
+305|Nödvändiga cookies håller webbplatsen igång. Analys-, marknadsförings- och tredjepartscookies används bara om du tillåter dem. Du kan ändra ditt val under Cookie-inställningar.
+306|Innehåll
+307|Alla påverkansprojekt och uppdrag
+308|Projekt visas här
+309|Granskade projekt publiceras på den här sidan.
+310|Projektförfrågan
+311|Förmedlingsbron
+312|Den centrala motorn för nätverkande och förmedling hos WEMA Global.
+313|Spår A
+314|Ideellt, humanitärt och lokalsamhälle
+315|Icke-statliga organisationer, kyrkor och missionsorganisationer
+316|Lokala och humanitära projekt
+317|Utbildnings- och miljöprogram
+318|Spår B
+319|Kommersiellt och vinstdrivande
+320|Företag, bolag och entreprenörer
+321|Professionella tjänster och teknikinitiativ
+322|Kommersiella projekt
+323|WEMA Global garanterar inte finansiering, investeringar, bidrag, gåvor, avtal, partnerskap, affärsframgång eller något ekonomiskt resultat.
+324|Projektinformation och samarbete
+325|Skapa ett projekt och spara utkast
+326|Skicka en intresseanmälan
+327|Begär en presentation
+328|Stödnätverk
+329|Stöd WEMA Globals uppdrag och verksamhet.
+331|Alla betalningar och avgifter är strikt icke-återbetalningsbara.
+332|Strikt icke-återbetalningsbart
+333|Ditt godkännande
+334|Betalningskvitton
+335|Köp i butiken
+336|Frågor
+337|Alla betalningar och avgifter är strikt icke-återbetalningsbara och betraktas som en slutgiltig gåva till WEMA Globals uppdrag och verksamhet. Detta gäller WITS-undervisningsavgifter, konferenser, medlemskap och gåvor.
+338|Före varje betalning måste du kryssa i en ruta för att bekräfta detta. Du kan inte betala utan den.
+339|Du får automatiskt ett bekräftelsemejl och ett betalningskvitto efter varje betalning. Ett kvitto är en betalningsbekräftelse, inte ett skattedokument.
+340|Produkter från WEMA Store köps på Amazon eller Shopify. Deras returpolicyer gäller.
+341|Om du debiterats av misstag, kontakta oss via Kontaktsidan med uppgifterna från ditt kvitto.
+342|Jag registrerar mig som
+343|Privatperson
+344|Organisation / NGO
+345|Kyrka / Tjänst
+346|Företag
+347|Resurspartner
+348|Konferensdelegat
+349|WITS-student
+351|Medlemsinloggning, instrumentpanel och digitalt ID-kort
+352|Medlemsregistrering med Stripe-betalning
+353|Medlemsinloggning och instrumentpanel
+354|Nedladdning av digitalt ID-kort
+355|Projekt och logg för volontäraktiviteter
+356|Medlemsregistrering
+357|Digitalt ID-kort
+359|Gå med i WEMA Servants och betala ditt medlemskap säkert.
+360|Instrumentpanel
+361|Profil, nedladdning av digitalt ID och volontärtimmar.
+362|Registrera dina volontärtimmar i WEMA:s projekt.
+364|Produktkatalog
+365|Produkterna som säljs här stödjer WEMA:s projekt.
+366|Köp slutförs på Amazon eller Shopify. WEMA Global tar inte emot betalningar för butikens produkter på den här webbplatsen.
+368|Reglerna för att använda WEMA Global.
+369|Godkännande
+370|Vår roll
+371|Konton
+372|Projekt och innehåll
+373|Tillämplig lag
+374|Genom att använda den här webbplatsen godkänner du dessa Användarvillkor, Integritetspolicyn och Återbetalningspolicyn.
+375|Lämna korrekta uppgifter och håll ditt lösenord säkert. Du ansvarar för aktiviteten på ditt konto.
+376|Du bekräftar att det du skickar in är korrekt och att du får dela det. WEMA Global kan godkänna, avslå, pausa eller ta bort inlämningar. Granskning eller publicering är inte finansiell, juridisk, investerings- eller redovisningsrådgivning.
+377|Alla betalningar och avgifter är strikt icke-återbetalningsbara. Se Återbetalningspolicyn.
+378|Butikens produkter säljs på Amazon och Shopify. Dessa plattformar hanterar ditt köp enligt sina egna villkor.
+379|WITS-ackrediteringen pågår (TRACS, ATS, ABHE). WITS gör inga ackrediteringsanspråk förrän den har beviljats.
+380|Dessa villkor regleras av lagarna i delstaten Wyoming, USA.
+381|Tack
+382|Välkommen till WEMA Global
+383|Vi har tagit emot ditt meddelande
+384|Din betalning har mottagits.
+385|Ditt konto har skapats.
+386|Vi har tagit emot din förfrågan. Vårt team svarar dig.
+387|QR-kod för incheckning
+388|Automatiskt svar
+389|Belopp
+391|Skickat automatiskt
+393|WEMA Institute of Theological Studies
+394|Ackreditering
+395|Pågående (TRACS, ATS, ABHE)
+397|Pågående
+400|Kurser
+401|Kurser, kursplan, studentinloggning och avgiftsbetalning.
+402|Kristet ledarskap
+403|Episkopalt nätverkande
+404|Apostoliska relationer
+405|Tjänstenätverkande
+406|Ledarutveckling
+407|Globala kyrkokontakter
+408|Teologisk utbildning
+409|Studieregister och intyg
+410|Kurser och kursplan
+411|Intyg
+412|WITS skiljer tydligt mellan intyg, diplom, akademiska examina och hedersutmärkelser.
+413|Studentinloggning
+414|Avgiftsbetalning
+415|Kurs

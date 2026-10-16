@@ -1,0 +1,39 @@
+---
+title: Contact
+desc: Contact WEMA Global: general, partner and project inquiries, and our Sheridan, Wyoming address.
+nav: contact
+---
+<section class="page-hero">
+  <div class="ph-bg" style="background-image:url('assets/partnership-meeting.jpg')"></div>
+  <div class="container rise">
+    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Contact</span></div>
+    <h1>Contact</h1>
+    <p>General, Partner & Project Inquiries</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start" id="ct-layout">
+    <div class="form-card reveal">
+      <form class="form" data-demo-submit data-redirect="thank-you.html?type=contact" novalidate>
+        <div class="row">
+          <div class="field"><label for="cn">Full name</label><input class="input" id="cn" required autocomplete="name"><div class="error-msg">Required</div></div>
+          <div class="field"><label for="ce">Email</label><input class="input" id="ce" type="email" required autocomplete="email"><div class="error-msg">Required</div></div>
+        </div>
+        <div class="field"><label for="cd">Department</label>
+          <select class="select" id="cd" required><option value="">Select</option><option>General</option><option>Partner</option><option>Project</option><option>Conference</option><option>Sponsorship</option><option>Exhibition</option><option>WITS</option><option>Media</option></select><div class="error-msg">Required</div></div>
+        <div class="field"><label for="cm">Message</label><textarea class="textarea" id="cm" required></textarea><div class="error-msg">Required</div></div>
+        <label class="consent"><input type="checkbox" required> <span>I agree to the Privacy Policy and Terms of Use.</span></label>
+        <button class="btn btn-gold" type="submit">Send message {{icon:arrow}}</button>
+      </form>
+    </div>
+    <div class="contact-info reveal reveal-d1">
+      <div class="c-row"><div class="ico">{{icon:building}}</div><div><b>World Episcopal Missionary Alliance Inc.</b>USA Registered Organization</div></div>
+      <div class="c-row"><div class="ico">{{icon:pin}}</div><div><b>Address</b><span data-cfg="address">30 N Gould St, Ste R, Sheridan, WY 82801, USA</span></div></div>
+      <div class="c-row"><div class="ico">{{icon:mail}}</div><div><b>Email</b><a href="#" data-cfg="email" data-cfg-type="mail">Coming soon</a></div></div>
+      <div class="c-row"><div class="ico">{{icon:phone}}</div><div><b>Phone</b><a href="#" data-cfg="phone" data-cfg-type="tel">Coming soon</a></div></div>
+      <div class="map-embed"><iframe title="Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=30+N+Gould+St+Ste+R+Sheridan+WY+82801&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:1020px){#ct-layout{grid-template-columns:1fr!important}}</style>

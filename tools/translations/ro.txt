@@ -1,0 +1,341 @@
+0|Sari la conținut
+1|Organizație înregistrată în SUA
+2|Sheridan, Wyoming
+14|Autentificare
+15|Înregistrare
+17|Împreună facem diferența
+18|Acasă
+19|Despre WEMA
+21|Parteneri
+22|Proiecte
+24|Magazin
+25|Conferințe
+26|Media
+27|Contact
+28|Donează
+29|Donează / Efectuează o plată
+30|Pagina nu a fost găsită
+31|Pagina căutată nu este disponibilă.
+32|WEMA Global pe telefonul tău
+33|Adaugă site-ul pe ecranul principal și folosește-l ca pe o aplicație.
+34|Adaugă pe ecranul principal
+43|Explorează
+44|Mai multe
+45|E-mail: în curând
+46|Telefon: în curând
+47|World Episcopal Missionary Alliance Inc. este o organizație înregistrată în SUA. WEMA Global este o platformă de facilitare și networking. Nu garantează finanțare, investiții, granturi, donații, contracte, parteneriate sau vreun rezultat financiar.
+48|Acreditare WITS: în curs (TRACS, ATS, ABHE). Toate plățile și taxele sunt strict nerambursabile. Plățile sunt procesate de Stripe și PayPal.
+49|Politica de confidențialitate
+50|Termeni de utilizare
+51|Politica de rambursare
+52|Preferințe cookie
+53|iPhone / iPad (Safari): atinge Partajează, apoi Adaugă pe ecranul principal.
+54|Android (Chrome): deschide meniul, apoi Instalează aplicația.
+55|Computer (Chrome / Edge): fă clic pe pictograma de instalare din bara de adrese.
+56|Cookie-urile necesare mențin site-ul în funcțiune. Cookie-urile opționale rămân dezactivate dacă nu le permiți.
+57|Necesare
+58|Analitice
+59|Marketing
+60|Terțe părți
+61|Acceptă toate
+62|Doar necesare
+63|Personalizează
+64|Salvează preferințele
+65|Limbă
+67|Principal
+68|Meniu
+69|Rețele sociale
+75|Informații juridice
+76|Înapoi sus
+77|Închide
+79|World Episcopal Missionary Alliance Inc. este o organizație înregistrată în SUA, în Sheridan, Wyoming.
+80|Viziune, misiune și conducere
+81|Un ecosistem digital global care conectează oameni, organizații, proiecte, cunoaștere, inițiative de mediu, conferințe și dezvoltarea liderilor prin facilitare sprijinită de tehnologie.
+82|Organizație
+83|Statut
+84|Birou
+85|Sheridan, Wyoming, SUA
+86|Conducere
+87|Rev. Dr. Benjamin Franklin, Primat / Supraveghetor General
+88|Departamente și misiuni WEMA
+89|Structură pentru voluntari și membri.
+91|Rețea de organizații partenere.
+93|Proiecte de educație, sănătate și infrastructură.
+95|Misiuni misionare și de întemeiere de biserici.
+96|Institutul de Studii Teologice WEMA: educație și certificare.
+98|Produse vândute pentru a sprijini proiectele WEMA.
+99|Prezență globală
+100|Țările în care lucrăm: SUA, India, Europa, Canada
+102|Canada
+103|Europa
+104|India
+105|Notificare privind înregistrarea în SUA
+106|World Episcopal Missionary Alliance Inc. este o organizație înregistrată în SUA.
+108|WEMA Global este o platformă de facilitare și networking. Nu garantează finanțare, investiții, granturi, donații, contracte, parteneriate, succes în afaceri sau vreun rezultat financiar.
+109|Lideri într-un cerc de discuție
+110|Hartă a lumii din puncte cu regiunile WEMA Global
+111|Regiuni
+113|Conferința Globală de Leadership
+114|Mai 2027 · Conferința Internațională WEMA Global
+115|Zile
+116|Ore
+117|Minute
+118|Secunde
+119|Înscrie-te acum
+120|Sponsorizează
+121|Înscrierea delegaților
+122|Înscrie-te și primește confirmarea.
+123|Vorbitori și program
+124|Vorbitorii și programul vor fi anunțați aici.
+125|Check-in cu QR și certificate
+126|Primești un cod QR pentru check-in și certificatul tău.
+127|Sponsorizare, expoziție și participare virtuală
+128|Solicitare de sponsorizare
+129|Expune
+130|Solicitare de expozant
+131|Permis conferință
+132|General
+133|VIP
+134|Internațional
+135|Virtual
+136|Student / Academic
+137|Slujire / Leadership
+138|Expozant
+139|Nume complet
+140|Obligatoriu
+141|E-mail
+142|Țara
+143|Organizație / biserică
+144|Metodă de plată
+145|Card
+148|Sunt de acord că toate plățile și taxele sunt strict nerambursabile și sunt considerate o donație finală pentru misiunile și activitatea WEMA Global.
+149|Dacă o traducere diferă, se aplică textul în limba engleză.
+150|Plătește în siguranță
+151|Plățile sunt procesate de Stripe și PayPal. WEMA Global nu stochează datele cardului.
+152|Numărătoare inversă
+154|Solicitări generale, ale partenerilor și ale proiectelor
+155|Departament
+156|Selectează
+157|Partener
+158|Proiect
+159|Conferință
+160|Sponsorizare
+161|Expoziție
+162|Mesaj
+163|Sunt de acord cu Politica de confidențialitate și Termenii de utilizare.
+164|Trimite mesajul
+165|Adresă
+166|În curând
+167|Telefon
+168|Google Maps
+170|Plată pentru
+171|Donație
+172|Înscriere la conferință
+173|Taxă WITS
+174|Abonament WEMA Servants
+175|Frecvență
+176|O singură dată
+177|Lunar
+178|Sumă (USD)
+179|După plată
+180|E-mail de confirmare
+181|Chitanță de plată
+182|Trimis automat și instantaneu.
+183|Misiunile și impactul nostru
+187|În curând · Conferința Internațională WEMA Global
+188|Leadership Global
+189|Mai 2027
+190|Locul va fi anunțat
+191|Obține permisul pentru conferință
+192|Participare virtuală
+193|Află mai multe
+194|Cumpără pentru o cauză
+195|Coco Peat, tricouri imprimate și veșminte clericale, disponibile pe Amazon și Shopify.
+196|Vizitează WEMA Store
+198|Vezi serviciile și impactul misiunilor noastre.
+199|Publicitate
+200|Sponsorizează și fă publicitate cu WEMA Global
+201|Ajunge la un public internațional de lideri, slujiri și parteneri.
+202|Sprijină misiunile și activitatea WEMA Global. Plăți sigure cu Stripe sau PayPal în USD.
+204|Un ecosistem digital global pentru facilitare, networking, inițiative de mediu, conferințe internaționale, dezvoltarea leadershipului creștin, educație teologică și colaborare transfrontalieră.
+205|Ecosistemul WEMA
+207|Conferințe internaționale.
+209|Știri și media.
+210|Aici susținătorii contribuie la lucrarea WEMA.
+211|De la conectare la impact
+212|Conectează
+213|Oamenii, organizațiile și proiectele se întâlnesc.
+214|Verifică
+215|Echipa noastră verifică fiecare trimitere.
+216|Facilitează
+217|Proiectele aprobate sunt partajate.
+218|Colaborează
+219|Partenerii și proiectele lucrează împreună.
+220|Impact
+221|Progresul este urmărit și documentat.
+222|Coco Peat
+223|În curând pe Amazon și Shopify
+224|Îmbrăcăminte
+225|Tricouri imprimate
+226|Veșminte clericale
+228|Răspândirea Evangheliei, formarea liderilor spirituali și slujirea comunităților cu compasiune.
+230|Îngrijire și educație pentru copii vulnerabili într-un mediu sigur.
+231|Misiuni active
+232|În slujire din
+233|Țările în care lucrăm
+234|Director global și hartă
+235|Conferința Internațională WEMA Global, mai 2027
+236|Înscrierea delegaților, sponsori, expozanți și participare virtuală. Datele și locul vor fi anunțate.
+237|Citește mai mult
+238|Acreditare WITS: în curs (TRACS, ATS, ABHE)
+239|Institutul de Studii Teologice WEMA parcurge procesul de acreditare.
+241|World Episcopal Missionary Alliance Inc. este o organizație înregistrată în SUA
+242|Înregistrată în Sheridan, Wyoming, SUA.
+243|În atenție
+247|Diapozitivul anterior
+252|Diapozitivul următor
+253|Pune pe pauză prezentarea
+254|Lideri de biserici și slujiri
+256|Membri, parteneri și studenți
+260|Parolă
+262|Știri, revistă, galerie foto și video
+263|Știri
+264|Revistă
+265|Galerie
+266|Mission Flame
+267|Revista noastră va fi publicată aici.
+268|Deschide imaginea
+269|Auditoriu
+270|Sală de clasă
+271|Lideri
+272|Sală de adunări
+273|Rețea globală
+274|Arena conferinței
+275|Imagine
+277|Offline
+278|Ești offline
+279|Verifică conexiunea la internet și încearcă din nou.
+281|Director global și hartă interactivă
+282|Profilul partenerului
+283|Date despre companie și organizație
+284|Managementul proiectelor
+285|Partenerii de resurse și colaboratorii globali pot răsfoi proiecte, își pot exprima interesul și pot solicita prezentări
+286|Datele de contact private nu sunt afișate automat
+287|Devino partener
+288|Numele organizației
+289|Persoana de contact
+290|Parteneri dându-și mâna
+292|Cum tratează WEMA Global informațiile tale personale.
+293|Informațiile pe care le colectăm
+294|Cum le folosim
+295|Plăți
+296|Partajare
+297|Securitate
+298|Drepturile tale
+299|Cookie-uri
+300|Colectăm informațiile pe care ni le oferi când te înregistrezi, trimiți un proiect, te înscrii la o conferință, te înscrii la un curs WITS, ne contactezi sau efectuezi o plată. Acestea includ numele, e-mailul, țara, organizația și starea plății.
+301|Folosim informațiile tale pentru a-ți gestiona contul, a procesa înscrieri și plăți, a trimite confirmări și chitanțe, a evalua proiecte, a face prezentări și a răspunde la mesajele tale.
+302|Nu îți vindem informațiile. Le partajăm doar cu furnizori de plăți și de servicii care ne ajută să operăm platforma, cu părțile prezentate atunci când ești de acord și atunci când legea o cere.
+303|Folosim HTTPS, parole criptate și controale de acces. Documentele private nu sunt niciodată publice.
+304|Poți cere oricând accesul la informațiile tale, corectarea sau ștergerea lor. Contactează-ne folosind datele de pe pagina Contact.
+305|Cookie-urile necesare mențin site-ul în funcțiune. Cookie-urile analitice, de marketing și ale terților sunt folosite doar dacă le permiți. Îți poți schimba alegerea în Preferințe cookie.
+306|Cuprins
+307|Toate proiectele de impact și misiunile
+308|Proiectele vor apărea aici
+309|Proiectele verificate sunt publicate pe această pagină.
+310|Solicitare despre un proiect
+311|Podul de Facilitare
+312|Motorul central de networking și facilitare al WEMA Global.
+313|Direcția A
+314|Non-profit, umanitar și comunitar
+315|ONG-uri, biserici și organizații misionare
+316|Proiecte comunitare și umanitare
+317|Programe educaționale și de mediu
+318|Direcția B
+319|Comercial și cu scop lucrativ
+320|Afaceri, companii și antreprenori
+321|Servicii profesionale și inițiative tehnologice
+322|Proiecte comerciale
+323|WEMA Global nu garantează finanțare, investiții, granturi, donații, contracte, parteneriate, succes în afaceri sau vreun rezultat financiar.
+324|Detaliile proiectului și colaborarea
+325|Creează un proiect și salvează ciorne
+326|Trimite o manifestare de interes
+327|Solicită o prezentare
+328|Rețeaua de sprijin
+329|Sprijină misiunile și activitatea WEMA Global.
+331|Toate plățile și taxele sunt strict nerambursabile.
+332|Strict nerambursabil
+333|Acordul tău
+334|Chitanțe de plată
+335|Achiziții din magazin
+336|Întrebări
+337|Toate plățile și taxele sunt strict nerambursabile și sunt considerate o donație finală pentru misiunile și activitatea WEMA Global. Aceasta se aplică taxelor de școlarizare WITS, conferințelor, abonamentului și donațiilor.
+338|Înainte de fiecare plată trebuie să bifezi o casetă pentru a confirma acest lucru. Fără ea nu poți plăti.
+339|Primești automat un e-mail de confirmare și o chitanță de plată după fiecare plată. O chitanță este o confirmare a plății, nu un document fiscal.
+340|Produsele WEMA Store se cumpără de pe Amazon sau Shopify. Se aplică politicile lor de retur.
+341|Dacă ai fost taxat din greșeală, contactează-ne prin pagina Contact, cu datele chitanței.
+342|Mă înregistrez ca
+343|Persoană fizică
+344|Organizație / ONG
+345|Biserică / Slujire
+346|Companie
+347|Partener de resurse
+348|Delegat la conferință
+349|Student WITS
+351|Autentificare membri, tablou de bord și card de identitate digital
+352|Înregistrarea membrilor cu plată prin Stripe
+353|Autentificare membri și tablou de bord
+354|Descărcarea cardului de identitate digital
+355|Proiecte și jurnal al activității de voluntariat
+356|Înregistrarea membrilor
+357|Card de identitate digital
+359|Alătură-te WEMA Servants și plătește-ți abonamentul în siguranță.
+360|Tablou de bord
+361|Profil, descărcarea identității digitale și ore de voluntariat.
+362|Înregistrează-ți orele de voluntariat în proiectele WEMA.
+364|Catalog de produse
+365|Produsele vândute aici sprijină proiectele WEMA.
+366|Achizițiile se finalizează pe Amazon sau Shopify. WEMA Global nu primește pe acest site plăți pentru produsele din magazin.
+368|Regulile de utilizare a WEMA Global.
+369|Acceptare
+370|Rolul nostru
+371|Conturi
+372|Proiecte și conținut
+373|Legea aplicabilă
+374|Folosind acest site, accepți acești Termeni de utilizare, Politica de confidențialitate și Politica de rambursare.
+375|Oferă informații corecte și păstrează parola în siguranță. Ești responsabil pentru activitatea din contul tău.
+376|Confirmi că ceea ce trimiți este corect și că ai dreptul să împărtășești. WEMA Global poate aproba, respinge, suspenda sau elimina trimiterile. Evaluarea sau publicarea nu reprezintă consultanță financiară, juridică, de investiții sau contabilă.
+377|Toate plățile și taxele sunt strict nerambursabile. Vezi Politica de rambursare.
+378|Produsele din magazin se vând pe Amazon și Shopify. Aceste platforme gestionează achiziția ta conform propriilor termeni.
+379|Acreditarea WITS este în curs (TRACS, ATS, ABHE). WITS nu pretinde nicio acreditare până când aceasta nu este acordată.
+380|Acești termeni sunt guvernați de legile statului Wyoming, SUA.
+381|Mulțumim
+382|Bun venit la WEMA Global
+383|Am primit mesajul tău
+384|Plata ta a fost primită.
+385|Contul tău a fost creat.
+386|Am primit solicitarea ta. Echipa noastră îți va răspunde.
+387|Cod QR pentru check-in
+388|Răspuns automat
+389|Sumă
+391|Trimis automat
+393|Institutul de Studii Teologice WEMA
+394|Acreditare
+395|În curs (TRACS, ATS, ABHE)
+397|În curs
+400|Cursuri
+401|Cursuri, programă, autentificare studenți și plata taxelor.
+402|Leadership creștin
+403|Networking episcopal
+404|Relații apostolice
+405|Networking între slujiri
+406|Dezvoltarea leadershipului
+407|Legături între biserici din lumea întreagă
+408|Educație teologică
+409|Evidențe academice și certificate
+410|Cursuri și programă
+411|Certificate
+412|WITS face o distincție clară între certificate, diplome, titluri academice și distincții onorifice.
+413|Autentificare studenți
+414|Plata taxelor
+415|Curs
