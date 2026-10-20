@@ -1,7 +1,7 @@
 {
   "name": "WEMA Global",
   "short_name": "WEMA Global",
-  "description": "Together Makes a Difference. Facilitation, Eco Shop, conferences, WITS and global missions.",
+  "description": "Together Makes a Difference. Service, learning, collaboration and meaningful connections.",
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
@@ -9,12 +9,31 @@
   "background_color": "#210429",
   "theme_color": "#3B0A45",
   "icons": [
-    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ],
   "shortcuts": [
-    { "name": "Donate / Make a Payment", "url": "donate.html" },
-    { "name": "Conference registration", "url": "conference-register.html" },
-    { "name": "Eco Shop", "url": "eco-shop.html" }
+    {
+      "name": "Become a Member",
+      "url": "register.html"
+    },
+    {
+      "name": "Events",
+      "url": "conferences.html"
+    },
+    {
+      "name": "WEMA Store",
+      "url": "store.html"
+    }
   ]
 }

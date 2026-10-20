@@ -254,22 +254,20 @@
     }
   });
 
-  /* ---------- Thank-you page (strings come from the hidden, translatable #tyStrings block) ---------- */
+  /* ---------- Thank-you page (messages come from the hidden, translatable #tyStrings blocks) ---------- */
   const ty = $('#thanks');
   if (ty) {
-    const q = new URLSearchParams(location.search), type = q.get('type') || 'registration';
-    const S = id => (document.getElementById(id) || {}).textContent || '';
+    const q = new URLSearchParams(location.search);
+    let type = q.get('type') || 'enquiry';
+    if (!document.getElementById('ty_' + type)) type = 'enquiry';
     function renderThanks() {
-      const pay = ['donation', 'membership', 'wits', 'conference'].includes(type);
-      const h = pay ? S('s_thanks') : type === 'registration' ? S('s_welcome') : S('s_received');
-      const p = pay ? S('s_paid') : type === 'registration' ? S('s_acct') : S('s_req');
-      const mails = pay ? [S('s_conf'), S('s_receipt')].concat(type === 'conference' ? [S('s_qr')] : []) : type === 'registration' ? [S('s_conf')] : [S('s_auto')];
-      $('#tyH').textContent = h; $('#tyP').textContent = p;
-      $('#tyMails').innerHTML = mails.map(m => `<li>${m.replace(/</g, '&lt;')}</li>`).join('');
-      $('#tyDetail').hidden = !pay;
-      const amount = q.get('amount');
+      const blk = document.getElementById('ty_' + type);
+      $('#tyH').textContent = blk.querySelector('b').textContent;
+      $('#tyP').textContent = blk.querySelector('span').textContent;
+      const isDon = type === 'donation', amount = q.get('amount');
+      $('#tyDetail').hidden = !isDon;
       $('#tyAmtRow').hidden = !amount;
-      if (amount) $('#tyAmt').textContent = '$' + Number(amount).toLocaleString() + ' USD' + (q.get('freq') === 'monthly' ? ' · ' + S('s_monthly') : '');
+      if (amount) $('#tyAmt').textContent = '$' + Number(amount).toLocaleString() + ' USD' + (q.get('freq') === 'monthly' ? ' · ' + ((document.getElementById('s_monthly') || {}).textContent || 'Monthly') : '');
       $('#tyItem').textContent = q.get('for') || ''; $('#tyItemRow').hidden = !q.get('for');
       $('#tyMethod').textContent = q.get('method') === 'paypal' ? 'PayPal' : 'Stripe';
     }

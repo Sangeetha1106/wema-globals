@@ -83,7 +83,7 @@
   /* ---------- Eco Shop product catalog ---------- */
   const pg = $('#productGrid');
   if (pg) {
-    pg.innerHTML = (D.products || []).map(p => {
+    pg.innerHTML = (D.products || []).slice(0, +pg.dataset.limit || 99).map(p => {
       const buy = [];
       if (p.amazon) buy.push(`<a class="btn btn-gold btn-sm" href="${esc(p.amazon)}" target="_blank" rel="noopener sponsored">Buy on Amazon ${EXT}</a>`);
       if (p.shopify) buy.push(`<a class="btn btn-purple btn-sm" href="${esc(p.shopify)}" target="_blank" rel="noopener sponsored">Buy on Shopify ${EXT}</a>`);

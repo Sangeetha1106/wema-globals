@@ -20,22 +20,13 @@ window.WEMA = {
     statsUrl: ''                               // optional JSON URL for live Missions & Impact statistics
   },
 
-  /* ---- HOMEPAGE SLIDING BANNER (shown after the conference slide) ----
-     type: event | product | mission | sponsor   ·   enabled:false hides   ·   start/end: 'YYYY-MM-DD' */
-  banners: [
-    { enabled: true, type: 'product', label: 'WEMA Store',
-      title: 'Shop for a Cause',
-      text: 'Coco Peat, Printed T-Shirts and Clergy Apparels, available on Amazon and Shopify.',
-      image: 'assets/eco-leaves.svg', cta: [{ text: 'Visit WEMA Store', href: 'store.html' }] },
-    { enabled: true, type: 'mission', label: 'Our Missions & Impact',
-      title: 'WEMA Missionaries and Alfa Omega Children\'s Home',
-      text: 'See the services and impact of our missions.',
-      image: 'assets/clergy-dialogue.jpg', cta: [{ text: 'Our Missions & Impact', href: 'index.html#missions' }, { text: 'Donate', href: 'donate.html', secondary: true }] },
-    { enabled: true, type: 'sponsor', label: 'Advertisement',
-      title: 'Sponsor and advertise with WEMA Global',
-      text: 'Reach an international audience of leaders, ministries and partners.',
-      image: 'assets/arena-stage.jpg', cta: [{ text: 'Sponsor Enquiry', href: 'contact.html?dept=Sponsorship' }] }
-  ],
+  /* ---- OPTIONAL ADVERTISING / ANNOUNCEMENT SLIDES (homepage hero) ----
+     The approved homepage hero is a single, uncluttered slide, so this list is empty.
+     To add a slide later, add an item like:
+     { enabled: true, type: 'event', label: 'Announcement', title: '...', text: '...', image: 'assets/leaders-group.jpg',
+       cta: [{ text: 'Learn more', href: 'events.html' }], start: 'YYYY-MM-DD', end: 'YYYY-MM-DD' }
+     Only add confirmed information. */
+  banners: [],
 
   /* ---- WEMA STORE PRODUCTS ----
      Paste the real Amazon / Shopify product links. A button shows only when its link is filled. */
@@ -45,28 +36,9 @@ window.WEMA = {
     { name: 'Clergy Apparels', category: 'Clergy Apparels', image: 'assets/clergy-dialogue.jpg', text: '', amazon: '', shopify: '' }
   ],
 
-  /* ---- OUR MISSIONS & IMPACT: live statistics ----
-     Add real numbers here (or set config.statsUrl to a JSON feed with the same shape).
-     Example: { value: 1500, label: 'People helped', suffix: '+' } */
-  figures: [
-    { value: 2, label: 'Active missions' },
-    { value: 2004, label: 'Serving since', plain: true }
-  ],
+  /* ---- NEWS (kept for future use; empty until confirmed announcements exist) ---- */
+  news: [],
 
-  /* ---- NEWS (Home + Media), newest first ---- */
-  news: [
-    { tag: 'Conferences', title: 'WEMA Global International Conference, May 21–30, 2027',
-      text: 'Delegate registration, sponsors, exhibitors and virtual participation. Dates and location will be announced.',
-      image: 'assets/assembly-hall.jpg', href: 'conferences.html' },
-    { tag: 'WITS', title: 'WITS accreditation: In Process (TRACS, ATS, ABHE)',
-      text: 'The WEMA Institute of Theological Studies is working through its accreditation process.',
-      image: 'assets/wits-classroom.jpg', href: 'wits.html' },
-    { tag: 'WEMA', title: 'World Episcopal Missionary Alliance Inc. is a USA Registered Organization',
-      text: 'Registered in Sheridan, Wyoming, USA.',
-      image: 'assets/leaders-group.jpg', href: 'about.html' }
-  ],
-
-  /* ---- PROJECTS listings. Empty until the first projects are published. ----
-     { id, title, org, country, summary, image, status } */
+  /* ---- PROJECTS listings. Empty until the first projects are published. ---- */
   projects: []
 };

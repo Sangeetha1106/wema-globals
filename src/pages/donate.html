@@ -1,39 +1,17 @@
 ---
-title: Donate / Make a Payment
-desc: Donate or make a payment to WEMA Global with Stripe or PayPal in USD.
+title: Make a Contribution
+desc: Support the work of WEMA Global with a one-time or monthly contribution in USD.
 nav: 
 ---
-<section class="page-hero">
-  <div class="ph-bg" style="background-image:url('assets/leaders-group.jpg')"></div>
-  <div class="container rise">
-    <div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Donate</span></div>
-    <h1>Donate / Make a Payment</h1>
-    <p>WEMA Support Network</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container donate-layout">
-    <div class="form-card reveal">
-      <form id="donateForm" class="form" data-checkout data-amount data-type="donation" novalidate>
-        <div class="field"><label for="purpose">Payment for</label>
-          <select class="select" id="purpose"><option>Donation</option><option>Conference registration</option><option>WITS fee</option><option>WEMA Servants membership</option></select></div>
-        <div class="field"><label>Frequency</label><div class="freq"><label><input type="radio" name="freq" value="once" checked><span>One time</span></label><label><input type="radio" name="freq" value="monthly"><span>Monthly</span></label></div></div>
-        <div class="field" id="amountBox"><label for="amount">Amount (USD)</label>
-          <div class="amt-chips"><button type="button" class="amt-chip" data-v="25">$25</button><button type="button" class="amt-chip" data-v="50">$50</button><button type="button" class="amt-chip" data-v="100">$100</button><button type="button" class="amt-chip" data-v="250">$250</button></div>
-          <div class="amount-wrap"><span>$</span><input class="input" id="amount" type="number" min="1" step="1" inputmode="decimal"></div>
-          <div class="error-msg">Required</div></div>
-        <div class="row"><div class="field"><label for="dn">Full name</label><input class="input" id="dn" autocomplete="name"></div><div class="field"><label for="de">Email</label><input class="input" id="de" type="email" autocomplete="email"></div></div>
-        {{checkout}}
-      </form>
-    </div>
-    <aside class="reveal reveal-d1">
-      <div class="widget"><h3>After you pay</h3>
-        <ul class="auto-list"><li>Confirmation email</li><li>Payment receipt</li></ul>
-        <p class="hint">Sent automatically and instantly.</p></div>
-      <div class="widget" style="margin-top:22px"><h3>Our Missions & Impact</h3>
-        <p><a href="https://wemamissionaries.org" target="_blank" rel="noopener">wemamissionaries.org</a></p>
-        <p style="margin:0"><a href="https://alfaomegachildrenhome.org" target="_blank" rel="noopener">alfaomegachildrenhome.org</a></p></div>
-    </aside>
-  </div>
-</section>
+<section class="page-hero"><div class="ph-bg" style="background-image:url('assets/clergy-dialogue.jpg')"></div>
+<div class="container rise"><div class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Make a Contribution</span></div><h1>Make a Contribution</h1><p>Support the work of WEMA Global.</p></div></section>
+<section class="section"><div class="container narrow"><div class="form-card reveal"><form id="donateForm" class="form" data-checkout data-amount data-type="donation" novalidate>
+<div class="field"><label for="purpose">Contribution purpose</label><select class="select" id="purpose"><option selected>General support for WEMA Global</option><option>WEMA Servants</option><option>WEMA Academy</option><option>Events</option></select></div>
+<div class="field"><label>Frequency</label><div class="freq"><label><input type="radio" name="freq" value="once" checked><span>One-time</span></label><label><input type="radio" name="freq" value="monthly"><span>Monthly</span></label></div></div>
+<div class="field" id="amountBox"><label for="amount">Amount in USD ($)</label><div class="amt-chips"><button type="button" class="amt-chip" data-v="25">$25</button><button type="button" class="amt-chip" data-v="50">$50</button><button type="button" class="amt-chip active" data-v="100">$100</button><button type="button" class="amt-chip" data-v="250">$250</button></div>
+<div class="amount-wrap"><span>$</span><input class="input" id="amount" name="amount" type="number" min="1" step="1" inputmode="decimal" value="100" required placeholder="Enter amount"></div><div class="error-msg">Please enter $1 or more</div></div>
+<div class="row"><div class="field"><label for="dn">Full name</label><input class="input" id="dn" type="text" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="de">Email</label><input class="input" id="de" type="email" required autocomplete="email"><div class="error-msg">Required</div></div></div>
+<div class="field"><label>Payment method</label><div class="methods"><label class="method"><input type="radio" name="method" value="stripe" checked><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><div><b>Card (Stripe)</b><small>USD</small></div></span></label><label class="method"><input type="radio" name="method" value="paypal"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><ellipse cx="12" cy="12" rx="4.2" ry="9.5"/></svg><div><b>PayPal</b><small>USD</small></div></span></label></div></div>
+<label class="consent"><input type="checkbox" class="pay-consent" required> <span>I have read the <a href="refund-policy.html" target="_blank" style="text-decoration:underline">Refund &amp; Cancellation Policy</a> and agree to the <a href="terms-and-conditions.html" target="_blank" style="text-decoration:underline">Terms &amp; Conditions</a>.</span></label>
+<div style="font-size:.82rem;color:var(--muted);margin:14px 0;background:#fff8ea;border:1px solid #e8d098;border-radius:6px;padding:10px 12px"><b>Preview note:</b> online payment is not yet connected. This preview form does not charge you.</div>
+<button type="button" class="btn btn-gold pay-btn" style="width:100%;justify-content:center">Continue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></form></div></div></section>
