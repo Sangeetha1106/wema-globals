@@ -92,7 +92,8 @@
         <div class="prod-body"><span class="tag-sm">${esc(p.category)}</span><h3>${esc(p.name)}</h3>${p.text ? `<p>${esc(p.text)}</p>` : ''}
         <div class="buy">${buy.length ? buy.join('') : '<span class="soon">Coming soon on Amazon and Shopify</span>'}</div></div></article>`;
     }).join('');
-    const cats = ['All'].concat([...new Set((D.products || []).map(p => p.category))]);
+    const uniqueCats = [...new Set((D.products || []).map(p => p.category))];
+    const cats = uniqueCats.length > 1 ? ['All'].concat(uniqueCats) : uniqueCats;
     const bar = $('#shopFilter');
     if (bar) {
       bar.innerHTML = cats.map((c, i) => `<button type="button" class="${i ? '' : 'active'}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
@@ -101,6 +102,11 @@
         $$('button', bar).forEach(x => x.classList.toggle('active', x === b));
         $$('.product', pg).forEach(p => p.style.display = (b.dataset.c === 'All' || p.dataset.cat === b.dataset.c) ? '' : 'none');
       });
+    }
+    if ((D.products || []).length === 1) {
+      pg.style.maxWidth = '420px';
+      pg.style.margin = '0 auto';
+      pg.style.gridTemplateColumns = '1fr';
     }
   }
 
@@ -137,5 +143,25 @@
       fg.style.setProperty('--cols', Math.min(list.length, 4));
       if (window.WEMA_translate) window.WEMA_translate();
     }).catch(() => {});
+  }
+
+  /* ---------- Leadership profiles (editable in site-data.js -> leaders). Empty until confirmed and approved. ---------- */
+  const lg = $('#leaderGrid');
+  if (lg) {
+    const list = D.leaders || [];
+    lg.innerHTML = list.map(p => `<article class="card reveal">${p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:12px">` : ''}
+      <h3 style="margin:0 0 4px">${esc(p.name)}</h3><div style="color:var(--purple);font-weight:700">${esc(p.title)}</div><div style="color:var(--muted);font-size:.9rem">${esc(p.country || '')}</div>
+      ${p.bio ? `<p style="margin-top:10px">${esc(p.bio)}</p>` : ''}${p.link ? `<a class="link-arrow" href="${esc(p.link)}" target="_blank" rel="noopener">Profile ${ARROW}</a>` : ''}</article>`).join('');
+    const em = $('#leaderEmpty'); if (em) em.style.display = list.length ? 'none' : '';
+  }
+
+  /* ---------- Partner cards (editable in site-data.js -> partners). Publish only with the partner's authorization. ---------- */
+  const pg2 = $('#partnerGrid');
+  if (pg2) {
+    const list = D.partners || [];
+    pg2.innerHTML = list.map(p => `<article class="card reveal">${p.logo ? `<img src="${esc(p.logo)}" alt="${esc(p.name)}" loading="lazy" style="max-height:80px;margin-bottom:12px">` : ''}
+      <h3 style="margin:0 0 4px">${esc(p.name)}</h3><div style="color:var(--muted);font-size:.9rem">${esc(p.country || '')} · ${esc(p.type || '')}</div>
+      <p style="margin-top:10px">${esc(p.text || '')}</p>${p.website ? `<a class="link-arrow" href="${esc(p.website)}" target="_blank" rel="noopener">Official website ${ARROW}</a>` : ''}</article>`).join('');
+    const em = $('#partnerEmpty'); if (em) em.style.display = list.length ? 'none' : '';
   }
 })();

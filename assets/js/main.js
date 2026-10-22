@@ -213,7 +213,7 @@
       if (field) field.classList.toggle('invalid', bad); if (bad) ok = false;
     });
     if (ok) {
-      try {
+      if (f.hasAttribute('data-account')) try {
         const nameInp = $('#rn', f) || $('#pp', f) || $('#pn', f);
         const emailInp = $('#re', f) || $('#le', f) || $('#pe', f);
         const roleSel = $('#rr', f);

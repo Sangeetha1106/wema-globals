@@ -15,7 +15,6 @@ window.WEMA = {
     whatsapp: '',
     address:  '30 N Gould St, Ste R, Sheridan, WY 82801, USA',
     social:   { linkedin: '', x: '', facebook: '', instagram: '', youtube: '', whatsapp: '' },
-    payments: { stripe: '', paypal: '' },      // optional payment links
     apps:     { ios: '', android: '' },        // optional store links
     statsUrl: ''                               // optional JSON URL for live Missions & Impact statistics
   },
@@ -29,16 +28,20 @@ window.WEMA = {
   banners: [],
 
   /* ---- WEMA STORE PRODUCTS ----
-     Paste the real Amazon / Shopify product links. A button shows only when its link is filled. */
+     price / shipping / tax are numbers in USD. Leave price empty until confirmed: the product then shows
+     "Price to be confirmed" and cannot be added to the cart. tax = rate as a decimal (e.g. 0.07) or leave empty. */
   products: [
-    { name: 'Coco Peat', category: 'Coco Peat', image: 'assets/eco-leaves.svg', text: '', amazon: '', shopify: '' },
-    { name: 'Printed T-Shirts', category: 'Garments', image: 'assets/logo.png', text: '', amazon: '', shopify: '' },
-    { name: 'Clergy Apparels', category: 'Clergy Apparels', image: 'assets/clergy-dialogue.jpg', text: '', amazon: '', shopify: '' }
+    { id: 'clergy-apparels', name: 'Clergy Apparels', category: 'Clergy Apparels', image: 'assets/clergy-dialogue.jpg', text: 'Product details, availability and delivery information will be shown here.', price: null, shipping: null, tax: null }
   ],
 
-  /* ---- NEWS (kept for future use; empty until confirmed announcements exist) ---- */
-  news: [],
+  /* ---- LEADERSHIP profiles (publish only after name spelling, title and permission are confirmed) ----
+     { name, title, country, bio, photo, link } */
+  leaders: [],
 
-  /* ---- PROJECTS listings. Empty until the first projects are published. ---- */
+  /* ---- PARTNER cards (publish only with the partner's permission and confirmed details) ----
+     { name, country, type, text, website, logo } */
+  partners: [],
+
+  news: [],
   projects: []
 };

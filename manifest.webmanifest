@@ -1,7 +1,7 @@
 {
   "name": "WEMA Global",
   "short_name": "WEMA Global",
-  "description": "Together Makes a Difference. Service, learning, collaboration and meaningful connections.",
+  "description": "Together makes difference. Connecting people, ministries, organizations and communities through service, learning, leadership development and collaborative initiatives.",
   "start_url": "index.html",
   "scope": "./",
   "display": "standalone",
@@ -24,16 +24,16 @@
   ],
   "shortcuts": [
     {
-      "name": "Become a Member",
-      "url": "register.html"
+      "name": "My Initiatives",
+      "url": "initiatives.html"
     },
     {
       "name": "Events",
-      "url": "conferences.html"
+      "url": "events.html"
     },
     {
-      "name": "WEMA Store",
-      "url": "store.html"
+      "name": "Membership",
+      "url": "membership.html"
     }
   ]
 }

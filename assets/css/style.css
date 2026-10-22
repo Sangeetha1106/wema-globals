@@ -918,3 +918,31 @@ table.t{width:100%;border-collapse:collapse;min-width:640px;background:#fff}
 @media (max-width:1340px){.nav{display:none}.burger{display:block}}
 @media (max-width:1020px){.head-cta .btn{display:none}}
 @media (min-width:1021px) and (max-width:1340px){.head-cta .btn{display:inline-flex!important}}
+
+/* ---------- Revised build additions (client document, Oct 2026) ---------- */
+.demo-note{background:#fff8ea;border:1.5px dashed #d9b45a;border-radius:10px;padding:12px 16px;margin:0 0 20px;font-size:.88rem;line-height:1.55;color:#5a4410}
+.gate-note{background:var(--purple-50);border:1.5px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:16px 20px;font-size:.93rem;line-height:1.6;color:var(--ink);margin:18px 0}
+.gate-note a{color:var(--purple);font-weight:700;text-decoration:underline}
+.pill-status{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--purple-50);color:var(--purple);font-weight:700;font-size:.8rem;margin:0 4px 6px 0}
+.pill-status.warn{background:#fff3d6;color:#8a5a00}
+.step-row{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.cat-card{display:block;text-decoration:none;color:inherit;transition:transform .3s var(--ease),box-shadow .3s}
+.cat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+ul.check{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+ul.check li{padding-left:28px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:800}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.foot-legal .tax-short{font-weight:600;color:var(--gold-light)}
+.dropdown{min-width:300px}
+.nav>li>a{font-size:.9rem}
+/* Isaiah 11:12 opening slide: floating text, glowing highlight */
+.verse-float{animation:vfloat 7s ease-in-out 1.6s infinite}
+.verse-title .gold,.verse-glow{animation:vglow 2.8s ease-in-out infinite}
+.verse-sub{font:600 clamp(1.25rem,2.1vw,1.75rem)/1.45 var(--font-display);color:#f1e6f6!important;max-width:30ch!important}
+.verse-ref{margin:0 0 26px;font:700 1rem var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light)}
+.verse-pill{animation:vglowbox 2.8s ease-in-out infinite}
+.verse-art .arch{animation:vfloat 8s ease-in-out .4s infinite}
+@keyframes vfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes vglow{0%,100%{text-shadow:0 0 0 rgba(212,175,55,0);opacity:1}50%{text-shadow:0 0 22px rgba(240,208,106,.95),0 0 48px rgba(212,175,55,.55);opacity:.86}}
+@keyframes vglowbox{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.0)}50%{box-shadow:0 0 18px 2px rgba(212,175,55,.55)}}
+@media (prefers-reduced-motion:reduce){.verse-float,.verse-title .gold,.verse-glow,.verse-pill,.verse-art .arch{animation:none!important}}
