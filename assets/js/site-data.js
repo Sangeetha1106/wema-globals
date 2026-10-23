@@ -13,9 +13,8 @@ window.WEMA = {
     email:    '',
     phone:    '',
     whatsapp: '',
-    address:  '30 N Gould St, Ste R, Sheridan, WY 82801, USA',
     social:   { linkedin: '', x: '', facebook: '', instagram: '', youtube: '', whatsapp: '' },
-    apps:     { ios: '', android: '' },        // optional store links
+    liveMode: false,   // set true ONLY after backend (payments, login, email, uploads, admin) is connected and tested
     statsUrl: ''                               // optional JSON URL for live Missions & Impact statistics
   },
 
@@ -25,7 +24,12 @@ window.WEMA = {
      { enabled: true, type: 'event', label: 'Announcement', title: '...', text: '...', image: 'assets/leaders-group.jpg',
        cta: [{ text: 'Learn more', href: 'events.html' }], start: 'YYYY-MM-DD', end: 'YYYY-MM-DD' }
      Only add confirmed information. */
-  banners: [],
+  banners: [],   // up to 3 extra slides here; the homepage shows at most 5 slides in total (2 fixed + 3 editable)
+
+  /* ---- HOMEPAGE VIDEO SLOT ----
+     Set ONE of:  youtube: 'https://www.youtube.com/watch?v=...'  |  vimeo: 'https://vimeo.com/...'  |  file: 'assets/video/intro.mp4'
+     Optional: poster: 'assets/....jpg', title: 'Video title'. Leave all empty to keep the empty slot. */
+  homeVideo: { youtube: '', vimeo: '', file: '', poster: '', title: 'WEMA Global introduction' },
 
   /* ---- WEMA STORE PRODUCTS ----
      price / shipping / tax are numbers in USD. Leave price empty until confirmed: the product then shows

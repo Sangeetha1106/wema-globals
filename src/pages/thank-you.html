@@ -8,7 +8,8 @@ nav: home
 <h1 id="tyH" style="font-size:clamp(2rem,4.2vw,3.2rem)">Thank you</h1>
 <p class="lead" id="tyP" style="margin-inline:auto"></p>
 <div class="widget" id="tyRef" style="max-width:520px;margin:24px auto;display:none"><div class="list-row"><span>Reference number</span><b id="tyRefNo">—</b></div></div>
-<div class="demo-note" style="max-width:640px;margin:20px auto" role="note"><b>Preview build.</b> Nothing was sent or stored on a server and no payment was taken. The reference number above is a preview value.</div>
+<div class="gate-note" id="tyQuote" style="max-width:640px;margin:20px auto;display:none;text-align:left"></div>
+<div class="demo-note" id="tyNote" style="max-width:640px;margin:20px auto" role="note"><b>Preview build.</b> Nothing was sent or stored on a server and no payment was taken.</div>
 <div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-purple" href="index.html">Home</a><a class="btn btn-outline-dark" href="dashboard.html">My Dashboard</a></div>
 </div></section>
 <script>
@@ -19,7 +20,7 @@ crowdfund:['Thank you','Thank you for submitting your project proposal. Your app
 directory:['Thank you','Thank you. Your directory application has been received. It will be reviewed by the WEMA Global team. You will receive an email when additional information is needed or when a decision has been made.',1],
 academy:['Thank you','Thank you for your course application. The WEMA Academy team will review your information and email you about eligibility, course details and any applicable fees.',1],
 alliance:['Thank you','Thank you for your Alliance membership application. The team will review your submission and contact you by email regarding the next steps and any applicable fees.',1],
-conference:['Thank you','Thank you for registering your interest in the Global Leadership Conference. This submission is not a confirmation of attendance or an invitation. The WEMA Global team will contact you by email after review.',1],
+conference:['Thank you','Thank you for registering your interest in the WEMA Global Leadership Conference. This submission is not a confirmation of attendance or an invitation. The WEMA Global team will contact you by email after review.',1],
 partners:['Thank you','Thank you for your partnership inquiry. The WEMA Global team will review your information and contact you about possible next steps.',1],
 order:['Thank you','Thank you for your order. Your order reference and confirmation details will be sent to your email address.',1],
 contact:['Thank you','Thank you for contacting WEMA Global. Our team will reply to you by email.',0],
@@ -28,7 +29,9 @@ membership_failed:['Payment not confirmed','We could not confirm your payment. P
 membership_preview:['Preview only','This is a preview of the membership checkout. No payment was taken and membership has not been activated.',0]
 };
 var t=new URLSearchParams(location.search).get('type')||'contact',m=M[t]||M.contact;
-document.getElementById('tyH').textContent=m[0];document.getElementById('tyP').textContent=m[1];
-if(m[2]){document.getElementById('tyRef').style.display='block';document.getElementById('tyRefNo').textContent='WG-PREVIEW-'+Math.random().toString(36).slice(2,8).toUpperCase();}
+function go(){var live=!!(window.WEMA&&WEMA.config&&WEMA.config.liveMode);var H=document.getElementById('tyH'),P=document.getElementById('tyP');
+if(live){H.textContent=m[0];P.textContent=m[1];if(m[2]){document.getElementById('tyRef').style.display='block';}document.getElementById('tyNote').style.display='none';}
+else{H.textContent='Preview — nothing was sent';P.textContent='This is a preview of the website. Your information was not sent or saved, no payment was taken, and no email was issued. When the live service is connected, visitors will see the message below.';var q=document.getElementById('tyQuote');q.style.display='block';q.innerHTML='<b></b><p style="margin:6px 0 0"></p>';q.querySelector('b').textContent='Live message: '+m[0];q.querySelector('p').textContent=m[1];}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
 })();
 </script>

@@ -205,13 +205,343 @@
   }
   $$('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m || e.target.closest('.modal-close')) m.classList.remove('open'); }));
 
-  /* ---------- Simple forms (contact, partner, login, register) ---------- */
-  $$('[data-demo-submit]').forEach(f => f.addEventListener('submit', e => {
-    e.preventDefault(); let ok = true;
-    $$('[required]', f).forEach(inp => {
-      const field = inp.closest('.field'), bad = inp.type === 'checkbox' ? !inp.checked : !inp.value.trim();
-      if (field) field.classList.toggle('invalid', bad); if (bad) ok = false;
+  /* ---------- Comprehensive Form Validation & Strict Typing Constraints ---------- */
+  function getFieldType(input) {
+    if (!input || !input.tagName) return 'other';
+    const tag = input.tagName.toLowerCase();
+    if (tag !== 'input' && tag !== 'textarea' && tag !== 'select') return 'other';
+
+    const type = (input.getAttribute('type') || (tag === 'textarea' ? 'textarea' : tag === 'select' ? 'select' : 'text')).toLowerCase();
+    const id = (input.id || '').toLowerCase();
+    const name = (input.name || '').toLowerCase();
+    const auto = (input.autocomplete || '').toLowerCase();
+
+    // Look for associated label text
+    let label = '';
+    if (input.id) {
+      const lbl = document.querySelector(`label[for="${input.id}"]`);
+      if (lbl) label = lbl.textContent;
+    }
+    if (!label) {
+      const fieldBox = input.closest('.field') || input.closest('label');
+      if (fieldBox) {
+        const lbl = fieldBox.querySelector('label') || (fieldBox.tagName.toLowerCase() === 'label' ? fieldBox : null);
+        if (lbl) label = lbl.textContent;
+      }
+    }
+    const cleanLabel = label.replace(/[*:\s]+/g, ' ').trim().toLowerCase();
+
+    // 1. Phone number field: type="tel", autocomplete="tel", or label/id/name has phone/mobile/tel
+    if (
+      type === 'tel' ||
+      auto === 'tel' ||
+      /\b(phone|mobile|cell|telephone|whatsapp)\b/i.test(cleanLabel) ||
+      /\b(phone|mobile|tel)\b/i.test(name) ||
+      /\b(phone|mobile|tel)\b/i.test(id) ||
+      id === 'st2' ||
+      id.includes('phone')
+    ) {
+      return 'phone';
+    }
+
+    // 2. Personal Name field: text input whose label represents a person's name
+    const isOrgOrOther = /\b(org|organization|company|ministry|church|project|title|course|role|country|address|city|state|zip|school|institution)\b/i.test(cleanLabel) ||
+                         /\b(org|organization|company|ministry|church|project|title|course)\b/i.test(id) ||
+                         /\b(org|organization|company|ministry|church|project|title|course)\b/i.test(name);
+
+    const isPersonalName = !isOrgOrOther && (
+      /\b(full\s*name|applicant\s*(?:full\s*)?name|contact\s*name|primary\s*contact\s*name|customer\s*name|member\s*name|first\s*name|last\s*name|your\s*name)\b/i.test(cleanLabel) ||
+      cleanLabel === 'name' ||
+      auto === 'name' || auto === 'given-name' || auto === 'family-name' ||
+      ['rn', 'cn', 'st0', 'pn', 'pp', 'formvolunteer_1', 'formfunder_1', 'formseeker_3'].includes(id)
+    );
+
+    if (isPersonalName && (type === 'text' || !input.hasAttribute('type'))) {
+      return 'name';
+    }
+
+    // 3. Email field
+    if (type === 'email' || auto === 'email' || /\bemail\b/i.test(cleanLabel) || /\bemail\b/i.test(id) || ['re', 'ce', 'le', 'pe', 'st1', 'formvolunteer_2', 'formfunder_4', 'formseeker_5', 'submit_5'].includes(id)) {
+      return 'email';
+    }
+
+    // 4. URL field
+    if (type === 'url' || /\b(website|url|web)\b/i.test(cleanLabel)) {
+      return 'url';
+    }
+
+    // 5. Password field
+    if (type === 'password' || auto.includes('password') || id === 'rp') {
+      return 'password';
+    }
+
+    return type;
+  }
+
+  // Setup Name and Phone inputs attributes
+  function setupInputs() {
+    $$('input').forEach(inp => {
+      const fType = getFieldType(inp);
+      if (fType === 'phone') {
+        inp.type = 'tel';
+        inp.setAttribute('inputmode', 'numeric');
+        inp.setAttribute('pattern', '[0-9]*');
+        inp.setAttribute('maxlength', '15');
+        inp.setAttribute('autocomplete', 'tel');
+      } else if (fType === 'name') {
+        inp.setAttribute('autocomplete', 'name');
+        inp.setAttribute('pattern', '[A-Za-z\\s]+');
+      }
     });
+  }
+  setupInputs();
+
+  // Strict typing restriction event listeners on document
+  document.addEventListener('keydown', e => {
+    const target = e.target;
+    if (!target || target.tagName !== 'INPUT') return;
+    const fType = getFieldType(target);
+
+    // Common allowed navigation/editing keys
+    const navKeys = ['Backspace', 'Delete', 'Tab', 'Escape', 'Enter', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
+    if (navKeys.includes(e.key) || e.ctrlKey || e.metaKey || e.altKey) return;
+
+    if (fType === 'phone') {
+      // Only digits 0-9 allowed to be typed
+      if (e.key.length === 1 && !/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    } else if (fType === 'name') {
+      // Only text letters and spaces allowed to be typed
+      if (e.key.length === 1 && !/^[a-zA-Z\s]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    }
+  }, true);
+
+  document.addEventListener('beforeinput', e => {
+    const target = e.target;
+    if (!target || target.tagName !== 'INPUT') return;
+    const fType = getFieldType(target);
+    if (!e.data) return;
+
+    if (fType === 'phone') {
+      if (!/^[0-9]+$/.test(e.data)) {
+        e.preventDefault();
+      }
+    } else if (fType === 'name') {
+      if (!/^[a-zA-Z\s]+$/.test(e.data)) {
+        e.preventDefault();
+      }
+    }
+  }, true);
+
+  document.addEventListener('paste', e => {
+    const target = e.target;
+    if (!target || target.tagName !== 'INPUT') return;
+    const fType = getFieldType(target);
+    if (fType !== 'phone' && fType !== 'name') return;
+
+    const pasted = (e.clipboardData || window.clipboardData)?.getData('text');
+    if (!pasted) return;
+
+    e.preventDefault();
+    let sanitized = '';
+    if (fType === 'phone') {
+      sanitized = pasted.replace(/\D/g, '').slice(0, 15);
+    } else if (fType === 'name') {
+      sanitized = pasted.replace(/[^a-zA-Z\s]/g, '');
+    }
+
+    if (sanitized) {
+      const start = target.selectionStart || 0;
+      const end = target.selectionEnd || 0;
+      const val = target.value || '';
+      const max = target.maxLength > 0 ? target.maxLength : 999;
+      const updated = (val.slice(0, start) + sanitized + val.slice(end)).slice(0, max);
+      target.value = updated;
+      const nextPos = Math.min(start + sanitized.length, updated.length);
+      target.setSelectionRange(nextPos, nextPos);
+      target.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }, true);
+
+  // Live sanitization & validation on input
+  document.addEventListener('input', e => {
+    const target = e.target;
+    if (!target || !target.tagName) return;
+    const tag = target.tagName.toLowerCase();
+    if (tag !== 'input' && tag !== 'textarea' && tag !== 'select') return;
+
+    const fType = getFieldType(target);
+    if (fType === 'phone') {
+      const cleaned = target.value.replace(/\D/g, '').slice(0, 15);
+      if (target.value !== cleaned) target.value = cleaned;
+    } else if (fType === 'name') {
+      const cleaned = target.value.replace(/[^a-zA-Z\s]/g, '');
+      if (target.value !== cleaned) target.value = cleaned;
+    }
+
+    // If field was previously marked invalid, re-validate live to clear error once valid
+    const fieldBox = target.closest('.field');
+    const consentBox = target.closest('.consent');
+    if ((fieldBox && fieldBox.classList.contains('invalid')) || (consentBox && consentBox.classList.contains('invalid'))) {
+      validateSingleField(target);
+    }
+  }, true);
+
+  // Re-validate checkbox change live
+  document.addEventListener('change', e => {
+    const target = e.target;
+    if (!target || target.type !== 'checkbox') return;
+    const consentBox = target.closest('.consent');
+    if (consentBox) {
+      if (target.checked) consentBox.classList.remove('invalid');
+    }
+  }, true);
+
+  // Validate on blur
+  document.addEventListener('blur', e => {
+    const target = e.target;
+    if (!target || !target.tagName) return;
+    const tag = target.tagName.toLowerCase();
+    if (tag !== 'input' && tag !== 'textarea' && tag !== 'select') return;
+    if (target.value && target.value.trim()) {
+      validateSingleField(target);
+    }
+  }, true);
+
+  function validateSingleField(inp) {
+    const fType = getFieldType(inp);
+    const isReq = inp.hasAttribute('required') || inp.required;
+    const val = (inp.value || '').trim();
+    const fieldBox = inp.closest('.field');
+    const consentBox = inp.closest('.consent');
+    let errorEl = fieldBox ? fieldBox.querySelector('.error-msg') : null;
+
+    let isValid = true;
+    let msg = '';
+
+    if (inp.type === 'checkbox') {
+      if (isReq && !inp.checked) {
+        isValid = false;
+        msg = 'Please check this box to proceed';
+      }
+      if (consentBox) {
+        consentBox.classList.toggle('invalid', !isValid);
+      }
+      return isValid;
+    }
+
+    if (inp.type === 'file') {
+      if (isReq && (!inp.files || inp.files.length === 0)) {
+        isValid = false;
+        msg = 'Please select a file to upload';
+      }
+    } else if (fType === 'name') {
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'Name is required';
+      } else if (val) {
+        if (!/^[a-zA-Z\s]+$/.test(val)) {
+          isValid = false;
+          msg = 'Only letters are allowed in name';
+        } else if (val.replace(/\s/g, '').length < 2) {
+          isValid = false;
+          msg = 'Name must be at least 2 characters';
+        }
+      }
+    } else if (fType === 'phone') {
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'Phone number is required';
+      } else if (val) {
+        if (!/^\d+$/.test(val)) {
+          isValid = false;
+          msg = 'Only numbers are allowed in phone number';
+        } else if (val.length < 7 || val.length > 15) {
+          isValid = false;
+          msg = 'Please enter a valid phone number (7 to 15 digits)';
+        }
+      }
+    } else if (fType === 'email') {
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'Email address is required';
+      } else if (val && !emailRegex.test(val)) {
+        isValid = false;
+        msg = 'Please enter a valid email address';
+      }
+    } else if (fType === 'url') {
+      const urlRegex = /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:\d+)?(\/.*)?$/i;
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'Website URL is required';
+      } else if (val && !urlRegex.test(val)) {
+        isValid = false;
+        msg = 'Please enter a valid URL (e.g. https://example.com)';
+      }
+    } else if (fType === 'password') {
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'Password is required';
+      } else if (val && val.length < 6) {
+        isValid = false;
+        msg = 'Password must be at least 6 characters';
+      }
+    } else if (inp.tagName.toLowerCase() === 'select') {
+      if (isReq && !inp.value) {
+        isValid = false;
+        msg = 'Please select an option';
+      }
+    } else {
+      if (isReq && !val) {
+        isValid = false;
+        msg = 'This field is required';
+      }
+    }
+
+    if (fieldBox) {
+      fieldBox.classList.toggle('invalid', !isValid);
+      if (!errorEl) {
+        errorEl = document.createElement('div');
+        errorEl.className = 'error-msg';
+        fieldBox.appendChild(errorEl);
+      }
+      errorEl.textContent = msg || 'Required';
+    }
+
+    return isValid;
+  }
+
+  function validateWemaForm(form) {
+    let isAllValid = true;
+    let firstInvalid = null;
+
+    const elements = Array.from(form.querySelectorAll('input, select, textarea'));
+    elements.forEach(el => {
+      if (el.type === 'submit' || el.type === 'button' || el.type === 'hidden') return;
+      const ok = validateSingleField(el);
+      if (!ok) {
+        isAllValid = false;
+        if (!firstInvalid) firstInvalid = el;
+      }
+    });
+
+    if (!isAllValid && firstInvalid) {
+      firstInvalid.focus();
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    return isAllValid;
+  }
+  window.validateWemaForm = validateWemaForm;
+
+  /* ---------- Simple forms (contact, partner, login, register, servants, etc.) ---------- */
+  $$('[data-demo-submit], #checkoutForm').forEach(f => f.addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = validateWemaForm(f);
     if (ok) {
       if (f.hasAttribute('data-account')) try {
         const nameInp = $('#rn', f) || $('#pp', f) || $('#pn', f);
@@ -226,7 +556,11 @@
         };
         localStorage.setItem('wema_user', JSON.stringify(user));
       } catch (err) {}
-      if (f.dataset.redirect) location.href = f.dataset.redirect;
+      if (f.dataset.redirect) {
+        location.href = f.dataset.redirect;
+      } else if (f.id === 'checkoutForm') {
+        location.href = 'thank-you.html?type=order';
+      }
     }
   }));
 
@@ -239,10 +573,9 @@
     [chk, amt].forEach(el => el && el.addEventListener('input', upd)); upd();
     if (btn) {
       btn.addEventListener('click', () => {
-        let valid = true;
-        $$('[required]', f).forEach(inp => { const bad = !inp.value.trim(); inp.closest('.field').classList.toggle('invalid', bad); if (bad) valid = false; });
-        if (needAmt) { const bad = !(+amt.value >= 1); amt.closest('.field').classList.toggle('invalid', bad); if (bad) valid = false; }
-        if (!valid || !ok()) return;
+        const formValid = validateWemaForm(f);
+        if (needAmt) { const bad = !(+amt.value >= 1); amt.closest('.field').classList.toggle('invalid', bad); if (bad) return; }
+        if (!formValid || !ok()) return;
         const method = ($('input[name=method]:checked', f) || {}).value || 'stripe';
         const sel = $('select', f), q = new URLSearchParams({ type: f.dataset.type, method });
         if (sel) q.set('for', sel.value);

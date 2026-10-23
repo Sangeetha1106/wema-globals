@@ -1,7 +1,7 @@
 # WEMA Global — Website (front end)
 
 Open `index.html`, or upload this folder to any web host (HTTPS recommended for the app/PWA features).
-This build follows the client's **Tamil Developer Instructions + Copy-Paste Content** document (Oct 2026) plus the 501(c)(3) notices and the Isaiah 11:12 opening banner. See `docs/DOCUMENT-COMPLIANCE-REPORT.md` for the page-by-page status and `docs/BACKEND-REQUIREMENTS.md` for what still needs a server.
+This build follows the client's **Tamil Developer Instructions + Copy-Paste Content** document (Oct 2026) plus the Isaiah 11:12 opening banner and the client's later corrections (Our Initiatives; no nonprofit/tax statements; USD $199 platform-wide; no unverified accreditation; three Servants pathways; preview honesty; placeholders removed). See `docs/DOCUMENT-COMPLIANCE-REPORT.md` for the page-by-page status and `docs/BACKEND-REQUIREMENTS.md` for what still needs a server.
 
 ## How the site is built
 - Page sources are in `src/pages/*.html` (small front-matter block + page body).

@@ -21,13 +21,23 @@
     else el.textContent = val;
   });
   $$('[data-social]').forEach(a => { const u = (C.social || {})[a.dataset.social]; if (u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false; } });
-  $$('[data-app]').forEach(a => { const u = (C.apps || {})[a.dataset.app]; if (u) { a.href = u; a.hidden = false; } });
+
+  /* ---------- Homepage video slot ---------- */
+  const vs = $('[data-video-slot]');
+  if (vs && D.homeVideo) {
+    const V = D.homeVideo; let src = '';
+    const yt = (V.youtube || '').match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/), vm = (V.vimeo || '').match(/vimeo\.com\/(\d+)/);
+    if (yt) src = 'https://www.youtube-nocookie.com/embed/' + yt[1];
+    else if (vm) src = 'https://player.vimeo.com/video/' + vm[1];
+    if (src) vs.innerHTML = '<iframe src="' + src + '" title="' + esc(V.title || 'Video') + '" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+    else if (V.file) vs.innerHTML = '<video controls preload="none" playsinline' + (V.poster ? ' poster="' + esc(V.poster) + '"' : '') + ' src="' + esc(V.file) + '"></video>';
+  }
 
   /* ---------- Homepage sliding banner ---------- */
   const slides = $('.slides');
   if (slides) {
     const today = new Date().toISOString().slice(0, 10);
-    const live = (D.banners || []).filter(b => b.enabled !== false && (!b.start || b.start <= today) && (!b.end || b.end >= today));
+    const live = (D.banners || []).filter(b => b.enabled !== false && (!b.start || b.start <= today) && (!b.end || b.end >= today)).slice(0, Math.max(0, 5 - $$('.hero-slide', slides).length));
     live.forEach((b, i) => {
       const el = document.createElement('div');
       el.className = 'hero-slide banner banner--' + esc(b.type);
