@@ -19,14 +19,14 @@ GLOBE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width
 INITIATIVES = [('WEMA Servants', 'servants.html'), ('WEMA Project Fund', 'crowdfund.html'), ('WEMA Global Directory', 'directory.html'),
                ('WEMA Academy', 'academy.html'), ('WEMA Global Episcopal Alliance', 'alliance.html')]
 EVENTS = [('WEMA Global Leadership Conference', 'conferences.html'), ('Mission Leaders Programs', 'mission-leaders-programs.html'), ('Missionary Orientation', 'missionary-orientation.html'),
-          ('Vision 2030 Introduction Programme', 'vision-2030.html'), ('WEMA Prayer Warrior Team', 'prayer-warrior-team.html')]
-EXPLORE = [('About Us', 'about.html'), ('Partners', 'partners.html'), ('WEMA Store', 'store.html'), ('Contact Us', 'contact.html')]
+          ('Vision 2030 Introduction Programme', 'vision-2030.html'), ('WEMA Prayer Warrior Team', 'prayer-warrior-team.html'), ('WEMA Global Honours & Awards', 'honours-awards.html')]
+EXPLORE = [('About Us', 'about.html'), ('Partners', 'partners.html'), ('WEMA Store', 'store.html'), ('Become a Sponsor', 'become-a-sponsor.html'), ('Contact Us', 'contact.html')]
 NAV = [
  ('home', 'Home', 'index.html', []),
  ('initiatives', 'Our Initiatives', 'initiatives.html', INITIATIVES),
  ('events', 'Events', 'events.html', EVENTS),
+ ('membership', 'Membership', 'membership.html', []),
  ('explore', 'Explore', 'about.html', EXPLORE),
- ('contact', 'Contact', 'contact.html', []),
 ]
 POLICIES = [('Privacy Policy', 'privacy-policy.html'), ('Terms of Use', 'terms-of-use.html'), ('Membership Terms', 'membership-terms.html'),
             ('Payment and Fees Policy', 'payment-fees-policy.html'), ('Refund/Cancellation Policy', 'refund-cancellation-policy.html'),
@@ -77,9 +77,10 @@ def header(active):
 </div>'''
 
 def footer():
-    ini = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in INITIATIVES)
-    exp = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in [('About Us', 'about.html'), ('Partners', 'partners.html'), ('WEMA Store', 'store.html'), ('Events', 'events.html'), ('Contact Us', 'contact.html')])
-    pol = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in POLICIES)
+    def col(items): return ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in items)
+    c1 = col([('About Us', 'about.html'), ('Our Initiatives', 'initiatives.html'), ('Events', 'events.html'), ('WEMA Global Honours & Awards', 'honours-awards.html'), ('Membership', 'membership.html'), ('Become a Sponsor', 'become-a-sponsor.html'), ('Contact Us', 'contact.html')])
+    c2 = col([('Privacy Policy', 'privacy-policy.html'), ('Terms of Use', 'terms-of-use.html'), ('Membership Terms', 'membership-terms.html'), ('Payment & Fees Policy', 'payment-fees-policy.html'), ('Refund & Cancellation Policy', 'refund-cancellation-policy.html'), ('Corporate Information', 'corporate-information.html')])
+    c3 = col([('Project Submission Disclaimer', 'project-submission-disclaimer.html'), ('Directory Listing Terms', 'directory-listing-terms.html'), ('Academy / Course Terms', 'academy-course-terms.html'), ('Conference / Event Terms', 'conference-event-terms.html'), ('Code of Conduct', 'code-of-conduct.html'), ('Cookie Policy', 'cookie-policy.html')])
     return f'''<footer class="site-foot">
   <div class="container app-strip">
     <div><b>WEMA Global on your phone</b><span>Add the website to your home screen and use it like an app.</span></div>
@@ -91,16 +92,16 @@ def footer():
       <b>{SITE}</b><span class="tag">{SLOGAN}</span>
       <p>Connecting people, ministries, organizations and communities through service, learning, leadership development and collaborative initiatives.</p>
     </div>
-    <div><h4>Initiatives</h4><ul>{ini}</ul></div>
-    <div><h4>Explore</h4><ul>{exp}</ul></div>
-    <div><h4>Policies</h4><ul>{pol}</ul></div>
-    <div><h4>Contact</h4><ul><li><a href="contact.html" data-cfg="email" data-cfg-type="mail">Contact Us</a></li></ul></div>
+    <div><h4>About WEMA Global</h4><ul>{c1}</ul></div>
+    <div><h4>Legal &amp; Policies</h4><ul>{c2}</ul></div>
+    <div><h4>Programs &amp; Services</h4><ul>{c3}</ul></div>
+    <div><h4>Connect With Us</h4><ul><li><a href="contact.html" data-cfg="email" data-cfg-type="mail">Contact Us</a></li></ul></div>
   </div>
   <div class="container foot-legal">
     <p>WEMA Global does not guarantee approval, funding, admission, credentials, certificates or any particular outcome.</p>
   </div>
   <div class="container foot-bottom">
-    <span>© <span data-year>2026</span> WEMA Global. All rights reserved.</span>
+    <span>© <span data-year>2026</span> WORLD EPISCOPAL MISSIONARY ALLIANCE INC. All rights reserved.</span>
     <nav aria-label="Legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="#" data-open-cookie>Cookie preferences</a></nav>
   </div>
 </footer>

@@ -56,13 +56,11 @@
     }
     document.addEventListener('click', e => { const r = e.target.closest('[data-rm]'); if (r) { delete cart[r.dataset.rm]; render(); } });
     const f = $('#checkoutForm');
-    if (f) {
-      f.addEventListener('submit', e => {
-        e.preventDefault();
-        const ok = window.validateWemaForm ? window.validateWemaForm(f) : true;
-        if (ok) location.href = 'thank-you.html?type=order';
-      });
-    }
+    f.addEventListener('submit', e => {
+      e.preventDefault(); let ok = true;
+      $$('[required]', f).forEach(i => { const bad = !i.value.trim(); i.closest('.field').classList.toggle('invalid', bad); if (bad) ok = false; });
+      if (ok) location.href = 'thank-you.html?type=order';
+    });
     render();
   }
   window.addEventListener('DOMContentLoaded', () => setTimeout(boot, 0));

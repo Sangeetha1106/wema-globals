@@ -44,3 +44,14 @@ Legend: **DONE** built in this front end · **PREVIEW** front end only, backend 
 - 'WEMA Crowd Funding' renamed 'WEMA Project Fund'; slogan 'Together Makes a Difference'; 'WEMA Global Leadership Conference'.
 - New pages: Cookie Policy, Code of Conduct, Corporate/Legal Information (legal name + brand only; registration details/EIN held until verified and approved).
 - Event pages now list the required fields (name, purpose, date, location, deadline, eligibility, fee, schedule, contact, registration) with unconfirmed items marked as published once confirmed; visa/travel responsibility note added.
+
+
+## v5 (Oct 24) — Master Instructions + Sponsors + Honours & Awards + 5 client corrections
+- Nav: Home | Our Initiatives | Events | Membership | Explore (Contact removed from navbar/drawer; Contact Us stays in Explore + footer).
+- Home: hero text, 3 buttons (+Upcoming Events), 5 initiative texts/buttons, Featured Event (May 21-30, year to be confirmed; venue TBA). Isaiah 11:12 shown once under the heading. Background softened to light lavender.
+- About, Leadership Conference, 4 unique event pages, Membership page, Partners, Contact (Subject + Inquiry Category + Submit Inquiry), full Privacy Policy, Terms, Membership Terms, Payment & Fees, Refund & Cancellation, Project Submission Disclaimer.
+- New pages: Become a Sponsor (+ enquiry form), WEMA Global Honours & Awards (events menu), Corporate Information (replaces Corporate/Legal Information).
+- Project funds timeline notice added to Project Fund page + form, Servants funder/seeker forms, thank-you message, Project Submission Disclaimer.
+- Footer rebuilt into 4 columns per the document; copyright uses the legal name.
+- HELD (not published): conference year; registration ID/date/agent/address/entity type/EIN; sponsor names and logos; award categories, nomination form, winners; official email/social links.
+- STILL NOT CONNECTED: backend (payments, login, email, uploads, admin, reference numbers).
