@@ -1,20 +1,15 @@
 ---
-title: Become a Member
-desc: Register for WEMA Global membership. One membership registration fee: USD $199.
-nav: membership
+title: Create Account
+desc: Create a WEMA Global account.
+nav: login
 ---
-<section class="auth"><div class="auth-art" style="--bg:url('assets/partnership-meeting.jpg')"><img src="assets/logo.png" alt="" width="84" height="84" style="margin-bottom:22px"><h1>Become a Member</h1><p>Together Makes a Difference</p></div>
-<div class="auth-form"><div class="box"><h2>Register for Membership</h2>
-<div style="background:var(--purple-50);border:1.5px solid var(--line);border-radius:10px;padding:16px;margin:0 0 20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-weight:700;color:var(--purple)">Membership Registration Fee</span><span style="font-weight:800;color:var(--gold-deep);font-size:1.2rem">USD $199</span></div>
-<p style="font-size:.85rem;color:var(--muted);margin:0">One overall WEMA Global membership fee, not a separate fee for each initiative. Existing members are not charged again for the same valid membership.</p></div>
-<form class="form" data-demo-submit data-redirect="thank-you.html?type=membership" novalidate>
-<div class="row"><div class="field"><label for="rn">Full name</label><input class="input" id="rn" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="rc">Country</label><input class="input" id="rc" autocomplete="country-name"></div></div>
-<div class="field"><label for="re">Email</label><input class="input" id="re" type="email" required autocomplete="email"><div class="error-msg">Required</div></div>
-<div class="field"><label for="rp">Password</label><input class="input" id="rp" type="password" required autocomplete="new-password"><div class="error-msg">Required</div></div>
-<div class="field"><label>Payment method (USD)</label><div class="methods">
-<label class="method"><input type="radio" name="reg_method" value="stripe" checked><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><b>Card (Stripe)<small>USD $199</small></b></span></label>
-<label class="method"><input type="radio" name="reg_method" value="paypal"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><ellipse cx="12" cy="12" rx="4.2" ry="9.5"/></svg><b>PayPal<small>USD $199</small></b></span></label></div></div>
-<label class="consent"><input type="checkbox" required id="regConsent"> <span>I have read and agree to the <a href="terms-and-conditions.html" target="_blank" style="text-decoration:underline">Terms &amp; Conditions</a>, <a href="membership-policy.html" target="_blank" style="text-decoration:underline">Membership Policy</a>, <a href="refund-policy.html" target="_blank" style="text-decoration:underline">Refund &amp; Cancellation Policy</a> and <a href="privacy-policy.html" target="_blank" style="text-decoration:underline">Privacy Policy</a>.</span></label>
-<div style="font-size:.82rem;color:var(--muted);margin:14px 0;background:#fff8ea;border:1px solid #e8d098;border-radius:6px;padding:10px 12px"><b>Preview note:</b> online payment, account creation and email confirmation are not yet connected. Submitting this preview form does not charge you.</div>
-<button class="btn btn-gold btn-block" type="submit">Submit Registration</button></form>
-<p style="margin-top:24px">Already a member? <a href="login.html"><b>Login</b></a></p></div></div></section>
+<section class="auth"><div class="auth-art" style="--bg:url('assets/partnership-meeting.jpg')"><img src="assets/logo.png" alt="" width="84" height="84" style="margin-bottom:22px"><h1>Create Account</h1><p>Together Makes a Difference</p></div>
+<div class="auth-form"><div class="box"><h2>Create an Account</h2><div class="demo-note" role="note"><b>Preview build.</b> This form is not yet connected to a server. Nothing is submitted, saved or sent until WEMA management approves the live launch.</div>
+<p style="font-size:.9rem;color:var(--muted)">Creating an account is free. Membership (USD $199 per year) is a separate, voluntary choice. <a href="membership.html">View Membership</a></p>
+<form class="form" data-demo-submit data-account data-redirect="dashboard.html" novalidate>
+<div class="row"><div class="field"><label for="rn">Full Name <span style="color:#d93025">*</span></label><input class="input" id="rn" required autocomplete="name"><div class="error-msg">Required</div></div><div class="field"><label for="rc">Country <span style="color:#d93025">*</span></label><input class="input" id="rc" required autocomplete="country-name"><div class="error-msg">Required</div></div></div>
+<div class="field"><label for="re">Email Address <span style="color:#d93025">*</span></label><input class="input" id="re" type="email" required autocomplete="email"><div class="error-msg">Required</div></div>
+<div class="field"><label for="rp">Password <span style="color:#d93025">*</span></label><input class="input" id="rp" type="password" required autocomplete="new-password"><div class="error-msg">Required</div></div>
+<label class="consent" style="margin:6px 0 14px"><input type="checkbox" required> <span>I consent to WEMA Global processing my details as described in the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and accept the <a href="terms-of-use.html" target="_blank">Terms of Use</a>.</span></label>
+<button class="btn btn-gold btn-block" type="submit">Create Account</button></form>
+<p style="margin-top:20px">Already have an account? <a href="login.html"><b>Log In</b></a></p></div></div></section>

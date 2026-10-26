@@ -212,8 +212,9 @@
       const field = inp.closest('.field'), bad = inp.type === 'checkbox' ? !inp.checked : !inp.value.trim();
       if (field) field.classList.toggle('invalid', bad); if (bad) ok = false;
     });
+    if (window.WEMA_V && !WEMA_V.checkForm(f)) ok = false;
     if (ok) {
-      try {
+      if (f.hasAttribute('data-account')) try {
         const nameInp = $('#rn', f) || $('#pp', f) || $('#pn', f);
         const emailInp = $('#re', f) || $('#le', f) || $('#pe', f);
         const roleSel = $('#rr', f);
@@ -320,4 +321,92 @@
 
   /* ---------- Start: apply saved language last, after everything has rendered ---------- */
   applyLang(store.get('wema_lang') || 'en', false);
+})();
+
+
+/* ==========================================================================
+   Form field validation (shared by every form on the site)
+   - Phone: digits only (optional leading +)      - Name: letters only, no digits
+   - Country: letters only                        - Amounts: numbers only
+   - Email / website / password format checks
+   ========================================================================== */
+(function () {
+  'use strict';
+  const RE_NAME_BAD = /[^\p{L}\p{M}\s.'’\-]/gu, RE_COUNTRY_BAD = /[^\p{L}\p{M}\s.'’\-,()]/gu;
+  const RE_NAME_TEST = /[^\p{L}\p{M}\s.'’\-]/u;
+  const ORG = /organi[sz]ation|company|ngo|church|ministry|business|legal|project|course|event|program|institution|website|social|registration|title|category|type|description|summary|name of|address/i;
+  function labelOf(inp) {
+    let t = '';
+    if (inp.id) { const l = document.querySelector('label[for="' + inp.id + '"]'); if (l) t = l.textContent; }
+    if (!t) { const l = inp.closest('.field') && inp.closest('.field').querySelector('label'); if (l) t = l.textContent; }
+    return t.replace(/\*/g, '').replace(/\((optional|if[^)]*)\)/ig, '').trim();
+  }
+  function kind(inp) {
+    if (inp.dataset.vkind !== undefined) return inp.dataset.vkind;
+    const type = (inp.type || '').toLowerCase(); let k = '';
+    if (['checkbox', 'radio', 'file', 'select-one', 'hidden', 'submit', 'button'].includes(type) || inp.tagName === 'SELECT' || inp.tagName === 'TEXTAREA') k = '';
+    else {
+      const lab = labelOf(inp), l = lab.toLowerCase();
+      if (type === 'email' || /\be-?mail\b/.test(l)) k = 'email';
+      else if (type === 'tel' || /phone|mobile|whatsapp/.test(l)) k = 'phone';
+      else if (type === 'url' || /^(official )?website$/.test(l)) k = 'url';
+      else if (type === 'password') k = (inp.autocomplete === 'new-password') ? 'newpass' : '';
+      else if (/^(total project (cost|budget)|funding (amount )?requested|funding requested|amount)$/.test(l)) k = 'amount';
+      else if (/^(country|country of residence|billing country)$/.test(l)) k = 'country';
+      else if (/(^|\b)(full name|first name|last name|surname|name|applicant name|applicant full name|contact name|contact person|member name|customer name|nominee name)$/.test(l) && !ORG.test(l)) k = 'name';
+    }
+    inp.dataset.vkind = k; return k;
+  }
+  const clean = {
+    phone: v => { v = v.replace(/[^\d+]/g, ''); const plus = v.startsWith('+'); v = v.replace(/\+/g, ''); return (plus ? '+' : '') + v.slice(0, 15); },
+    name: v => v.replace(RE_NAME_BAD, '').replace(/\s{2,}/g, ' ').slice(0, 80),
+    country: v => v.replace(RE_COUNTRY_BAD, '').slice(0, 60),
+    amount: v => { v = v.replace(/[^\d.]/g, ''); const i = v.indexOf('.'); return i < 0 ? v.slice(0, 12) : (v.slice(0, i + 1) + v.slice(i + 1).replace(/\./g, '').slice(0, 2)).slice(0, 15); }
+  };
+  const MSG = {
+    phone: 'Enter a valid phone number (digits only, 7–15 digits, optional + at the start).',
+    name: 'Enter a valid name (letters only, no numbers).',
+    country: 'Enter a valid country name (letters only).',
+    amount: 'Enter a valid amount (numbers only).',
+    email: 'Enter a valid email address, for example name@example.com.',
+    url: 'Enter a valid website address starting with http:// or https://.',
+    newpass: 'Password must be at least 8 characters.'
+  };
+  function msg(inp) {
+    const k = kind(inp), v = (inp.value || '').trim();
+    if (!k || !v) return '';
+    if (k === 'phone') { const d = v.replace(/\D/g, ''); return (/^\+?\d+$/.test(v) && d.length >= 7 && d.length <= 15) ? '' : MSG.phone; }
+    if (k === 'name') return (/[\p{L}]/u.test(v) && !RE_NAME_TEST.test(v) && v.length >= 2) ? '' : MSG.name;
+    if (k === 'country') return (/[\p{L}]/u.test(v) && !/[^\p{L}\p{M}\s.'’\-,()]/u.test(v)) ? '' : MSG.country;
+    if (k === 'amount') return (/^\d+(\.\d{1,2})?$/.test(v) && parseFloat(v) > 0) ? '' : MSG.amount;
+    if (k === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? '' : MSG.email;
+    if (k === 'url') return /^https?:\/\/[^\s.]+\.[^\s]{2,}$/i.test(v) ? '' : MSG.url;
+    if (k === 'newpass') return v.length >= 8 ? '' : MSG.newpass;
+    return '';
+  }
+  function show(inp, m) {
+    const field = inp.closest('.field'); if (!field) return;
+    const em = field.querySelector('.error-msg');
+    if (em) { if (!em.dataset.def) em.dataset.def = em.textContent || 'Required'; em.textContent = m || em.dataset.def; }
+    if (m) field.classList.add('invalid'); else if (inp.value.trim() || !inp.required) field.classList.remove('invalid');
+  }
+  function prep(inp) {
+    const k = kind(inp); if (!k || inp.dataset.vprep) return; inp.dataset.vprep = '1';
+    if (k === 'phone') { inp.setAttribute('inputmode', 'tel'); inp.setAttribute('maxlength', '16'); inp.setAttribute('autocomplete', 'tel'); }
+    if (k === 'name') { inp.setAttribute('autocomplete', inp.autocomplete || 'name'); inp.setAttribute('maxlength', '80'); }
+    if (k === 'country') inp.setAttribute('maxlength', '60');
+    if (k === 'amount') inp.setAttribute('inputmode', 'decimal');
+    if (k === 'email') { inp.setAttribute('inputmode', 'email'); inp.setAttribute('maxlength', '254'); }
+    if (clean[k]) inp.addEventListener('input', () => { const c = clean[k](inp.value); if (c !== inp.value) inp.value = c; show(inp, ''); });
+    inp.addEventListener('blur', () => show(inp, msg(inp)));
+    inp.addEventListener('input', () => { if (inp.closest('.field') && inp.closest('.field').classList.contains('invalid')) show(inp, msg(inp)); });
+  }
+  function checkForm(f) {
+    let ok = true;
+    f.querySelectorAll('input, textarea').forEach(inp => { prep(inp); const m = msg(inp); if (m) { show(inp, m); ok = false; } });
+    return ok;
+  }
+  function init() { document.querySelectorAll('form input').forEach(prep); }
+  window.WEMA_V = { msg: msg, checkForm: checkForm, init: init };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

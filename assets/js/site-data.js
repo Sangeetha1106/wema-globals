@@ -13,10 +13,11 @@ window.WEMA = {
     email:    '',
     phone:    '',
     whatsapp: '',
-    address:  '30 N Gould St, Ste R, Sheridan, WY 82801, USA',
     social:   { linkedin: '', x: '', facebook: '', instagram: '', youtube: '', whatsapp: '' },
-    payments: { stripe: '', paypal: '' },      // optional payment links
-    apps:     { ios: '', android: '' },        // optional store links
+    /* WEMA Global App (Academy page). While empty, the page shows a disabled "coming soon" button. Add a link here (later: from the admin panel) and it becomes active automatically.
+       url = one link for both stores or a web app;  ios / android = individual store links. */
+    academyApp: { url: '', ios: '', android: '' },
+    liveMode: false,   // set true ONLY after backend (payments, login, email, uploads, admin) is connected and tested
     statsUrl: ''                               // optional JSON URL for live Missions & Impact statistics
   },
 
@@ -26,19 +27,28 @@ window.WEMA = {
      { enabled: true, type: 'event', label: 'Announcement', title: '...', text: '...', image: 'assets/leaders-group.jpg',
        cta: [{ text: 'Learn more', href: 'events.html' }], start: 'YYYY-MM-DD', end: 'YYYY-MM-DD' }
      Only add confirmed information. */
-  banners: [],
+  banners: [],   // up to 3 extra slides here; the homepage shows at most 5 slides in total (2 fixed + 3 editable)
+
+  /* ---- HOMEPAGE VIDEO SLOT ----
+     Set ONE of:  youtube: 'https://www.youtube.com/watch?v=...'  |  vimeo: 'https://vimeo.com/...'  |  file: 'assets/video/intro.mp4'
+     Optional: poster: 'assets/....jpg', title: 'Video title'. Leave all empty to keep the empty slot. */
+  homeVideo: { youtube: '', vimeo: '', file: 'assets/video/wema-promotion.mp4', poster: 'assets/video/wema-promotion-poster.jpg', title: 'WEMA Global promotion video' },
 
   /* ---- WEMA STORE PRODUCTS ----
-     Paste the real Amazon / Shopify product links. A button shows only when its link is filled. */
+     price / shipping / tax are numbers in USD. Leave price empty until confirmed: the product then shows
+     "Price to be confirmed" and cannot be added to the cart. tax = rate as a decimal (e.g. 0.07) or leave empty. */
   products: [
-    { name: 'Coco Peat', category: 'Coco Peat', image: 'assets/eco-leaves.svg', text: '', amazon: '', shopify: '' },
-    { name: 'Printed T-Shirts', category: 'Garments', image: 'assets/logo.png', text: '', amazon: '', shopify: '' },
-    { name: 'Clergy Apparels', category: 'Clergy Apparels', image: 'assets/clergy-dialogue.jpg', text: '', amazon: '', shopify: '' }
+    { id: 'clergy-apparels', name: 'Clergy Apparels', category: 'Clergy Apparels', image: 'assets/clergy-dialogue.jpg', text: 'Product details, availability and delivery information will be shown here.', price: null, shipping: null, tax: null }
   ],
 
-  /* ---- NEWS (kept for future use; empty until confirmed announcements exist) ---- */
-  news: [],
+  /* ---- LEADERSHIP profiles (publish only after name spelling, title and permission are confirmed) ----
+     { name, title, country, bio, photo, link } */
+  leaders: [],
 
-  /* ---- PROJECTS listings. Empty until the first projects are published. ---- */
+  /* ---- PARTNER cards (publish only with the partner's permission and confirmed details) ----
+     { name, country, type, text, website, logo } */
+  partners: [],
+
+  news: [],
   projects: []
 };

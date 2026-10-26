@@ -1,7 +1,7 @@
 # WEMA Global — Website (front end)
 
 Open `index.html`, or upload this folder to any web host (HTTPS recommended for the app/PWA features).
-This build follows the **WEMA Global Front-End UI Master Script (v1.0)**. See `docs/PAGE-STATUS-REPORT.md` for the page-by-page status and the list of backend features that are not yet functional.
+This build follows the client's **Tamil Developer Instructions + Copy-Paste Content** document (Oct 2026) plus the Isaiah 11:12 opening banner and the client's later corrections (Our Initiatives; no nonprofit/tax statements; USD $199 platform-wide; no unverified accreditation; three Servants pathways; preview honesty; placeholders removed). See `docs/DOCUMENT-COMPLIANCE-REPORT.md` for the page-by-page status and `docs/BACKEND-REQUIREMENTS.md` for what still needs a server.
 
 ## How the site is built
 - Page sources are in `src/pages/*.html` (small front-matter block + page body).
@@ -9,11 +9,11 @@ This build follows the **WEMA Global Front-End UI Master Script (v1.0)**. See `d
 - After editing anything in `src/pages` or the menu/footer in `build.py`, run `python3 build.py` to regenerate the finished pages in the root folder.
 
 ## Edit without touching layouts
-`assets/js/site-data.js` → contact details (email, phone, address), social links, payment links, store product links, optional homepage slides.
+`assets/js/site-data.js` → contact details (email, phone, address), social links, store products (name, price, shipping, tax), leadership profiles, partner cards, optional homepage slides.
 Empty values show "coming soon" or hide the icon, so only approved details are ever shown.
 
 ## When WEMA confirms event details
-Open `src/pages/conferences.html` and replace the "Conference details to be announced" card with the confirmed date, venue, programme, speakers and fees (a `facts` block is used for this in the page generator), then run `python3 build.py`.
+Open `src/pages/conferences.html`, move the held date line (HTML comment at the top) into the page once the year and exact venue are confirmed, then run `python3 build.py`. Do the same for the legal-name block in `src/pages/about.html`.
 
 ## Languages
 13 languages (en, es, fr, de, pt, it, nl, pl, ru, uk, sv, el, ro). Dictionaries live in `assets/lang/<code>.js`, compiled from `tools/translations/<code>.txt` with `python3 tools/build_lang.py`.

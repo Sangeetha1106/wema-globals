@@ -1,5 +1,5 @@
 /* WEMA Global service worker: offline-friendly shell. Bump VERSION to refresh caches. */
-const VERSION = 'wema-v5';
+const VERSION = 'wema-v13';
 const SHELL = ['index.html','offline.html','assets/css/style.css','assets/js/main.js','assets/js/site-data.js','assets/js/render.js','assets/logo.png','assets/icons/icon-192.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== VERSION).map(x => caches.delete(x)))).then(() => self.clients.claim())); });

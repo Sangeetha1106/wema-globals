@@ -1,11 +1,38 @@
 ---
-title: Thank you
-desc: Thank you from WEMA Global.
-nav: 
+title: Thank You
+desc: Thank you.
+nav: home
 ---
-<section class="section" style="padding-top:calc(var(--head-h) + 110px)" id="thanks"><div class="container thanks-card">
+<section class="section" style="padding-top:calc(var(--head-h) + 90px)" id="done"><div class="container thanks-card">
 <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div>
-<div hidden id="tyStrings"><div id="ty_membership"><b>Thank you for registering</b><span>We have received your membership registration details. Payment confirmation and account activation will follow once online payment and email are connected and tested.</span></div><div id="ty_enquiry"><b>Thank you</b><span>We have received your request. Our team will respond to you.</span></div><div id="ty_project"><b>Thank you for your submission</b><span>We have received your project proposal. Our team will review it and contact you if further documents are needed. Submission does not guarantee approval or funding.</span></div><div id="ty_partner"><b>Thank you for applying</b><span>We have received your partner application. Our team will review it. A directory listing does not automatically mean formal partner approval.</span></div><div id="ty_contact"><b>We received your message</b><span>Thank you for contacting WEMA Global. Our team will reply as soon as possible.</span></div><div id="ty_donation"><b>Thank you</b><span>We have received your contribution details. Confirmation and receipt will follow once online payment and email are connected and tested.</span></div><span id="s_monthly">Monthly</span></div>
-<h1 id="tyH" style="font-size:clamp(2.2rem,4.5vw,3.6rem)"></h1><p class="lead" id="tyP" style="margin-inline:auto"></p>
-<div class="widget" style="text-align:left;margin:34px 0" id="tyDetail"><div class="list-row" id="tyItemRow"><span>Contribution for</span><b id="tyItem"></b></div><div class="list-row" id="tyAmtRow"><span>Amount</span><b id="tyAmt"></b></div><div class="list-row" id="tyMethodRow"><span>Payment method</span><b id="tyMethod"></b></div></div>
-<div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-purple" href="index.html">Home</a><a class="btn btn-outline-dark" href="contact.html">Contact</a></div></div></section>
+<h1 id="tyH" style="font-size:clamp(2rem,4.2vw,3.2rem)">Thank you</h1>
+<p class="lead" id="tyP" style="margin-inline:auto"></p>
+<div class="widget" id="tyRef" style="max-width:520px;margin:24px auto;display:none"><div class="list-row"><span>Reference number</span><b id="tyRefNo">—</b></div></div>
+<div class="gate-note" id="tyQuote" style="max-width:640px;margin:20px auto;display:none;text-align:left"></div>
+<div class="demo-note" id="tyNote" style="max-width:640px;margin:20px auto" role="note"><b>Preview build.</b> Nothing was sent or stored on a server and no payment was taken.</div>
+<div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn btn-purple" href="index.html">Home</a><a class="btn btn-outline-dark" href="dashboard.html">My Dashboard</a></div>
+</div></section>
+<script>
+(function(){
+var M={
+servants:['Thank you','Thank you for submitting your application to WEMA Servants. Your reference number and next steps will be sent to your registered email address.',1],
+crowdfund:['Thank you','Thank you for submitting your project proposal. Your application reference number has been created. WEMA Global will review your submission and contact you by email regarding any additional information or next steps. Please be advised that the processing of project funds does not follow a fixed timeline or have a specific deadline.',1],
+directory:['Thank you','Thank you. Your directory application has been received. It will be reviewed by the WEMA Global team. You will receive an email when additional information is needed or when a decision has been made.',1],
+academy:['Thank you','Thank you for your course application. The WEMA Academy team will review your information and email you about eligibility, course details and any applicable fees.',1],
+alliance:['Thank you','Thank you for your Alliance membership application. The team will review your submission and contact you by email regarding the next steps and any applicable fees.',1],
+conference:['Thank you','Thank you for registering your interest in the WEMA Global Leadership Conference. This submission is not a confirmation of attendance or an invitation. The WEMA Global team will contact you by email after review.',1],
+partners:['Thank you','Thank you for your partnership inquiry. The WEMA Global team will review your information and contact you about possible next steps.',1],
+order:['Thank you','Thank you for your order. Your order reference and confirmation details will be sent to your email address.',1],
+contact:['Thank you','Thank you for contacting WEMA Global. Your inquiry has been submitted successfully. Our team will review your message and respond through the appropriate channel.',0],
+sponsor:['Thank you','Thank you for your sponsorship enquiry. Our team will review your proposal and contact you to discuss suitable opportunities. Submitting an enquiry does not confirm a sponsorship arrangement.',1],
+membership_success:['Membership payment confirmed','Your membership payment has been confirmed. Your membership status and access will be updated in your account.',0],
+membership_failed:['Payment not confirmed','We could not confirm your payment. Please check your payment method or contact WEMA Global support. Your membership will be activated after payment is successfully confirmed.',0],
+membership_preview:['Preview only','This is a preview of the membership checkout. No payment was taken and membership has not been activated.',0]
+};
+var t=new URLSearchParams(location.search).get('type')||'contact',m=M[t]||M.contact;
+function go(){var live=!!(window.WEMA&&WEMA.config&&WEMA.config.liveMode);var H=document.getElementById('tyH'),P=document.getElementById('tyP');
+if(live){H.textContent=m[0];P.textContent=m[1];if(m[2]){document.getElementById('tyRef').style.display='block';}document.getElementById('tyNote').style.display='none';}
+else{H.textContent='Preview — nothing was sent';P.textContent='This is a preview of the website. Your information was not sent or saved, no payment was taken, and no email was issued. When the live service is connected, visitors will see the message below.';var q=document.getElementById('tyQuote');q.style.display='block';q.innerHTML='<b></b><p style="margin:6px 0 0"></p>';q.querySelector('b').textContent='Live message: '+m[0];q.querySelector('p').textContent=m[1];}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>

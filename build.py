@@ -16,19 +16,23 @@ CARET = '<svg class="caret" viewBox="0 0 12 8" fill="none" stroke="currentColor"
 GLOBE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><ellipse cx="12" cy="12" rx="4.2" ry="9.5"/></svg>'
 
 # ---- Navigation (single source of truth) ----
+INITIATIVES = [('WEMA Servants', 'servants.html'), ('WEMA Project Fund', 'crowdfund.html'), ('WEMA Global Directory', 'directory.html'),
+               ('WEMA Academy', 'academy.html'), ('WEMA Global Episcopal Alliance', 'alliance.html')]
+EVENTS = [('WEMA Global Leadership Conference', 'conferences.html'), ('Mission Leaders Programs', 'mission-leaders-programs.html'), ('Missionary Orientation', 'missionary-orientation.html'),
+          ('Vision 2030 Introduction Programme', 'vision-2030.html'), ('WEMA Prayer Warrior Team', 'prayer-warrior-team.html'), ('WEMA Global Honours & Awards', 'honours-awards.html')]
+EXPLORE = [('About Us', 'about.html'), ('Partners', 'partners.html'), ('WEMA Store', 'store.html'), ('Become a Sponsor', 'become-a-sponsor.html'), ('Contact Us', 'contact.html')]
 NAV = [
  ('home', 'Home', 'index.html', []),
- ('about', 'About Us', 'about.html', [('Our Story', 'about.html#story'), ('Vision & Mission', 'about.html#vision'), ('Leadership & Governance', 'about.html#leadership')]),
- ('initiatives', 'Our Initiatives', 'index.html#initiatives', [('WEMA Servants', 'servants.html'), ('WEMA Crowdfund', 'crowdfund.html'), ('WEMA Academy', 'academy.html'), ('WEMA Global Directory', 'directory.html'), ('WEMA Global Episcopal Alliance', 'alliance.html')]),
- ('membership', 'Membership', 'membership.html', [('Membership Overview', 'membership.html'), ('Membership Benefits', 'membership-benefits.html'), ('Register', 'register.html'), ('Login', 'login.html')]),
- ('events', 'Events', 'conferences.html', [('WEMA Global Leadership Conference', 'conferences.html'), ('Upcoming Events', 'events.html')]),
- ('store', 'Store', 'store.html', []),
- ('contact', 'Contact', 'contact.html', []),
+ ('initiatives', 'Our Initiatives', 'initiatives.html', INITIATIVES),
+ ('events', 'Events', 'events.html', EVENTS),
+ ('membership', 'Membership', 'membership.html', []),
+ ('explore', 'Explore', 'about.html', EXPLORE),
 ]
-INITIATIVES = NAV[2][3]
-POLICIES = [('Privacy Policy', 'privacy-policy.html'), ('Terms & Conditions', 'terms-and-conditions.html'), ('Membership Policy', 'membership-policy.html'),
-            ('Refund & Cancellation Policy', 'refund-policy.html'), ('Cookie Policy', 'cookie-policy.html'), ('Disclaimer', 'disclaimer.html'),
-            ('Crowdfunding Policy', 'crowdfunding-policy.html'), ('Code of Conduct', 'code-of-conduct.html')]
+POLICIES = [('Privacy Policy', 'privacy-policy.html'), ('Terms of Use', 'terms-of-use.html'), ('Membership Terms', 'membership-terms.html'),
+            ('Payment and Fees Policy', 'payment-fees-policy.html'), ('Refund/Cancellation Policy', 'refund-cancellation-policy.html'),
+            ('Project Submission Disclaimer', 'project-submission-disclaimer.html'), ('Directory Listing Terms', 'directory-listing-terms.html'),
+            ('Academy/Course Terms', 'academy-course-terms.html'), ('Conference/Event Terms', 'conference-event-terms.html'),
+            ('Cookie Policy', 'cookie-policy.html'), ('Code of Conduct', 'code-of-conduct.html'), ('Corporate/Legal Information', 'corporate-legal-information.html')]
 LANGS = [('en', 'English'), ('es', 'Español'), ('fr', 'Français'), ('de', 'Deutsch'), ('pt', 'Português'), ('it', 'Italiano'), ('nl', 'Nederlands'),
          ('pl', 'Polski'), ('ru', 'Русский'), ('uk', 'Українська'), ('sv', 'Svenska'), ('el', 'Ελληνικά'), ('ro', 'Română')]
 
@@ -51,9 +55,10 @@ def header(active):
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="topbar"><div class="container">
-    <div class="tb-left"><span>USA Registered Organization · Sheridan, Wyoming</span></div>
+    <div class="tb-left"></div>
     <div class="tb-right">
       <div class="lang"><button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">{GLOBE}<span class="lang-current">English</span><svg width=10 height=10 viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5l5 5 5-5"/></svg></button><div class="lang-menu" role="menu"></div></div>
+      <a href="dashboard.html">My Dashboard</a>
     </div>
   </div></div>
   <div class="mainbar"><div class="container">
@@ -61,57 +66,50 @@ def header(active):
     <nav aria-label="Primary"><ul class="nav">
 {chr(10).join(items)}
     </ul></nav>
-    <div class="head-cta"><a class="btn btn-outline btn-sm btn-login" href="login.html">Login</a><a class="btn btn-gold btn-sm" href="register.html">Become a Member</a>
+    <div class="head-cta"><a class="btn btn-outline btn-sm btn-login" href="login.html">Login</a><a class="btn btn-gold btn-sm" href="register.html">Create Account</a>
       <button class="burger" aria-label="Menu" aria-expanded="false"><span></span></button></div>
   </div></div>
 </header>
 <div class="drawer" aria-label="Menu">
 {chr(10).join(drawer)}
-  <div class="d-actions"><a class="btn btn-gold" href="register.html">Become a Member</a><a class="btn btn-outline" href="login.html">Login</a></div>
+  <div class="d-actions"><a class="btn btn-gold" href="register.html">Create Account</a><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-outline" href="dashboard.html">My Dashboard</a></div>
   <div class="d-lang">{langs_d}</div>
 </div>'''
 
 def footer():
-    ini = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in INITIATIVES)
-    quick = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(l)) for k, l, h, s in NAV)
-    quick = quick.replace('index.html#initiatives', 'index.html#initiatives')
-    pol = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in POLICIES)
-    sup = ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in [('Membership Benefits', 'membership-benefits.html'), ('Register', 'register.html'), ('Login', 'login.html'),
-          ('Submit a Project', 'crowdfund.html#submit-project'), ('Apply to Become a Partner', 'directory.html#partner-apply'), ('Contact Support', 'contact.html')])
+    def col(items): return ''.join('<li><a href="%s">%s</a></li>' % (h, esc(t)) for t, h in items)
+    c1 = col([('About Us', 'about.html'), ('Our Initiatives', 'initiatives.html'), ('Events', 'events.html'), ('WEMA Global Honours & Awards', 'honours-awards.html'), ('Membership', 'membership.html'), ('Become a Sponsor', 'become-a-sponsor.html'), ('Contact Us', 'contact.html')])
+    c2 = col([('Privacy Policy', 'privacy-policy.html'), ('Terms of Use', 'terms-of-use.html'), ('Membership Terms', 'membership-terms.html'), ('Payment & Fees Policy', 'payment-fees-policy.html'), ('Refund & Cancellation Policy', 'refund-cancellation-policy.html'), ('Corporate Information', 'corporate-information.html')])
+    c3 = col([('Project Submission Disclaimer', 'project-submission-disclaimer.html'), ('Directory Listing Terms', 'directory-listing-terms.html'), ('Academy / Course Terms', 'academy-course-terms.html'), ('Conference / Event Terms', 'conference-event-terms.html'), ('Code of Conduct', 'code-of-conduct.html'), ('Cookie Policy', 'cookie-policy.html')])
     return f'''<footer class="site-foot">
   <div class="container app-strip">
     <div><b>WEMA Global on your phone</b><span>Add the website to your home screen and use it like an app.</span></div>
-    <div class="app-btns"><button class="btn btn-gold btn-sm" type="button" id="installBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg> Add to Home Screen</button>
-      <a class="btn btn-outline btn-sm" data-app="ios" href="#" hidden>App Store</a><a class="btn btn-outline btn-sm" data-app="android" href="#" hidden>Google Play</a></div>
+    <div class="app-btns"><button class="btn btn-gold btn-sm" type="button" id="installBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg> Add to Home Screen</button></div>
   </div>
   <div class="container foot-top">
     <div class="foot-brand">
       <img src="assets/logo.png" alt="WEMA logo" width="92" height="92" loading="lazy">
       <b>{SITE}</b><span class="tag">{SLOGAN}</span>
-      <p>WEMA Global is a platform designed to encourage service, learning, collaboration and meaningful connections across communities and organizations.</p>
-      <div class="socials" aria-label="Social media">
-        <a href="#" data-social="linkedin" aria-label="LinkedIn" hidden><b>in</b></a><a href="#" data-social="x" aria-label="X" hidden><b>X</b></a><a href="#" data-social="facebook" aria-label="Facebook" hidden><b>f</b></a><a href="#" data-social="instagram" aria-label="Instagram" hidden><b>ig</b></a><a href="#" data-social="youtube" aria-label="YouTube" hidden><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></a><a href="#" data-social="whatsapp" aria-label="WhatsApp" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></a>
-      </div>
+      <p>Connecting people, ministries, organizations and communities through service, learning, leadership development and collaborative initiatives.</p>
     </div>
-    <div><h4>Quick Links</h4><ul>{quick}</ul></div>
-    <div><h4>Our Initiatives</h4><ul>{ini}</ul></div>
-    <div><h4>Membership &amp; Support</h4><ul>{sup}</ul></div>
-    <div><h4>Policies</h4><ul>{pol}</ul></div>
+    <div><h4>About WEMA Global</h4><ul>{c1}</ul></div>
+    <div><h4>Legal &amp; Policies</h4><ul>{c2}</ul></div>
+    <div><h4>Programs &amp; Services</h4><ul>{c3}</ul></div>
+    <div><h4>Connect With Us</h4><ul><li><a href="contact.html" data-cfg="email" data-cfg-type="mail">Contact Us</a></li></ul></div>
   </div>
   <div class="container foot-legal">
-    <p><b>World Episcopal Missionary Alliance Inc.</b>, USA Registered Organization · 30 N Gould St, Ste R, Sheridan, WY 82801, USA. <span data-cfg="email" data-cfg-type="mail"></span> <span data-cfg="phone" data-cfg-type="tel"></span></p>
-    <p>WEMA Global is a facilitation and networking platform. It does not guarantee funding, grants, employment, admission, accreditation, ordination, partnership approval, investment or any specific outcome.</p>
+    <p>WEMA Global does not guarantee approval, funding, admission, credentials, certificates or any particular outcome.</p>
   </div>
   <div class="container foot-bottom">
-    <span>© <span data-year>2026</span> WEMA Global. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="#" data-open-cookie>Cookie preferences</a></nav>
+    <span>© <span data-year>2026</span> WORLD EPISCOPAL MISSIONARY ALLIANCE INC. All rights reserved.</span>
+    <nav aria-label="Legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="#" data-open-cookie>Cookie preferences</a></nav>
   </div>
 </footer>
 <button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <div class="modal" id="iosHelp" role="dialog" aria-modal="true" aria-labelledby="ios-t"><div class="modal-box"><button class="modal-close" aria-label="Close">×</button><h3 id="ios-t">Add to Home Screen</h3><p>iPhone / iPad (Safari): tap Share, then Add to Home Screen.</p><p>Android (Chrome): open the menu, then Install app.</p><p>Computer (Chrome / Edge): click the install icon in the address bar.</p></div></div>
 <div class="cookie" role="dialog" aria-label="Cookie preferences">
   <h4>Cookie preferences</h4>
-  <p>Necessary cookies keep the site working. Optional cookies stay off unless you allow them. See our <a href="cookie-policy.html" style="text-decoration:underline">Cookie Policy</a>.</p>
+  <p>Necessary cookies keep the site working. Optional cookies stay off unless you allow them. See our <a href="privacy-policy.html#cookies" style="text-decoration:underline">Privacy Policy</a>.</p>
   <div class="opts">
     <label>Necessary <span class="switch"><input type="checkbox" checked disabled aria-label="Necessary"><span></span></span></label>
     <label>Analytics <span class="switch"><input type="checkbox" aria-label="Analytics"><span></span></span></label>
@@ -158,24 +156,20 @@ def page(meta, body):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body{bcls}>
 {header(meta.get('nav', ''))}
 <main id="main">
-{body.strip()}
+{re.sub(r'<!--.*?-->', '', body, flags=re.S).strip()}
 </main>
 {footer()}
 <script src="assets/js/site-data.js" defer></script>
 <script src="assets/js/render.js" defer></script>
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>
 '''
-
-# Old file names that now point to the new structure (kept so earlier links do not break)
-REDIRECTS = {'partners.html': 'directory.html#ngo-partners', 'wits.html': 'academy.html', 'terms-of-use.html': 'terms-and-conditions.html',
-             'summit2027.html': 'conferences.html', 'media.html': 'index.html'}
 
 def main():
     n = 0
@@ -183,12 +177,7 @@ def main():
         meta, body = parse(f)
         out = os.path.join(ROOT, os.path.basename(f))
         open(out, 'w', encoding='utf-8').write(page(meta, body)); n += 1
-    for old, new in REDIRECTS.items():
-        open(os.path.join(ROOT, old), 'w', encoding='utf-8').write(
-            '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Redirecting | WEMA Global</title>'
-            '<meta http-equiv="refresh" content="0; url=%s"><link rel="canonical" href="%s"></head>'
-            '<body><p>This page has moved. <a href="%s">Continue</a>.</p></body></html>' % (new, new, new))
-    print('built %d pages + %d redirects' % (n, len(REDIRECTS)))
+    print('built %d pages' % n)
 
 if __name__ == '__main__':
     main()

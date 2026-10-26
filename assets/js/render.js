@@ -21,13 +21,31 @@
     else el.textContent = val;
   });
   $$('[data-social]').forEach(a => { const u = (C.social || {})[a.dataset.social]; if (u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false; } });
-  $$('[data-app]').forEach(a => { const u = (C.apps || {})[a.dataset.app]; if (u) { a.href = u; a.hidden = false; } });
+
+  /* ---------- Academy: optional WEMA Global App slot (hidden until a link is set) ---------- */
+  const appSlot = $('[data-app-slot]'), AP = C.academyApp || {};
+  if (appSlot) {
+    let any = false;
+    $$('[data-app-link]', appSlot).forEach(a => { const u = AP[a.dataset.appLink]; if (u && /^https?:\/\//i.test(u)) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.hidden = false; any = true; } });
+    $$('[data-app-soon],[data-app-soon-note]', appSlot).forEach(x => { x.hidden = any; });
+  }
+
+  /* ---------- Homepage video slot ---------- */
+  const vs = $('[data-video-slot]');
+  if (vs && D.homeVideo) {
+    const V = D.homeVideo; let src = '';
+    const yt = (V.youtube || '').match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/), vm = (V.vimeo || '').match(/vimeo\.com\/(\d+)/);
+    if (yt) src = 'https://www.youtube-nocookie.com/embed/' + yt[1];
+    else if (vm) src = 'https://player.vimeo.com/video/' + vm[1];
+    if (src) vs.innerHTML = '<iframe src="' + src + '" title="' + esc(V.title || 'Video') + '" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+    else if (V.file) vs.innerHTML = '<video controls preload="none" playsinline' + (V.poster ? ' poster="' + esc(V.poster) + '"' : '') + ' src="' + esc(V.file) + '"></video>';
+  }
 
   /* ---------- Homepage sliding banner ---------- */
   const slides = $('.slides');
   if (slides) {
     const today = new Date().toISOString().slice(0, 10);
-    const live = (D.banners || []).filter(b => b.enabled !== false && (!b.start || b.start <= today) && (!b.end || b.end >= today));
+    const live = (D.banners || []).filter(b => b.enabled !== false && (!b.start || b.start <= today) && (!b.end || b.end >= today)).slice(0, Math.max(0, 5 - $$('.hero-slide', slides).length));
     live.forEach((b, i) => {
       const el = document.createElement('div');
       el.className = 'hero-slide banner banner--' + esc(b.type);
@@ -92,7 +110,8 @@
         <div class="prod-body"><span class="tag-sm">${esc(p.category)}</span><h3>${esc(p.name)}</h3>${p.text ? `<p>${esc(p.text)}</p>` : ''}
         <div class="buy">${buy.length ? buy.join('') : '<span class="soon">Coming soon on Amazon and Shopify</span>'}</div></div></article>`;
     }).join('');
-    const cats = ['All'].concat([...new Set((D.products || []).map(p => p.category))]);
+    const uniqueCats = [...new Set((D.products || []).map(p => p.category))];
+    const cats = uniqueCats.length > 1 ? ['All'].concat(uniqueCats) : uniqueCats;
     const bar = $('#shopFilter');
     if (bar) {
       bar.innerHTML = cats.map((c, i) => `<button type="button" class="${i ? '' : 'active'}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
@@ -101,6 +120,11 @@
         $$('button', bar).forEach(x => x.classList.toggle('active', x === b));
         $$('.product', pg).forEach(p => p.style.display = (b.dataset.c === 'All' || p.dataset.cat === b.dataset.c) ? '' : 'none');
       });
+    }
+    if ((D.products || []).length === 1) {
+      pg.style.maxWidth = '420px';
+      pg.style.margin = '0 auto';
+      pg.style.gridTemplateColumns = '1fr';
     }
   }
 
@@ -137,5 +161,25 @@
       fg.style.setProperty('--cols', Math.min(list.length, 4));
       if (window.WEMA_translate) window.WEMA_translate();
     }).catch(() => {});
+  }
+
+  /* ---------- Leadership profiles (editable in site-data.js -> leaders). Empty until confirmed and approved. ---------- */
+  const lg = $('#leaderGrid');
+  if (lg) {
+    const list = D.leaders || [];
+    lg.innerHTML = list.map(p => `<article class="card reveal">${p.photo ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" style="width:100%;border-radius:12px;margin-bottom:12px">` : ''}
+      <h3 style="margin:0 0 4px">${esc(p.name)}</h3><div style="color:var(--purple);font-weight:700">${esc(p.title)}</div><div style="color:var(--muted);font-size:.9rem">${esc(p.country || '')}</div>
+      ${p.bio ? `<p style="margin-top:10px">${esc(p.bio)}</p>` : ''}${p.link ? `<a class="link-arrow" href="${esc(p.link)}" target="_blank" rel="noopener">Profile ${ARROW}</a>` : ''}</article>`).join('');
+    const em = $('#leaderEmpty'); if (em) em.style.display = list.length ? 'none' : '';
+  }
+
+  /* ---------- Partner cards (editable in site-data.js -> partners). Publish only with the partner's authorization. ---------- */
+  const pg2 = $('#partnerGrid');
+  if (pg2) {
+    const list = D.partners || [];
+    pg2.innerHTML = list.map(p => `<article class="card reveal">${p.logo ? `<img src="${esc(p.logo)}" alt="${esc(p.name)}" loading="lazy" style="max-height:80px;margin-bottom:12px">` : ''}
+      <h3 style="margin:0 0 4px">${esc(p.name)}</h3><div style="color:var(--muted);font-size:.9rem">${esc(p.country || '')} · ${esc(p.type || '')}</div>
+      <p style="margin-top:10px">${esc(p.text || '')}</p>${p.website ? `<a class="link-arrow" href="${esc(p.website)}" target="_blank" rel="noopener">Official website ${ARROW}</a>` : ''}</article>`).join('');
+    const em = $('#partnerEmpty'); if (em) em.style.display = list.length ? 'none' : '';
   }
 })();
